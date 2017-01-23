@@ -26,8 +26,29 @@ Quindi la sequenza prima di partire è:
 
 Dopodiché si può lanciare l'applicazione con ```java -jar DuckQuack.jar``` od usare l'eseguibile Windows(tm) ```DuckQuack.exe```.
 
+Sono disponibili dei parametri da linea di comando ```--load [file]```, ```--run [file]``` e ```--hide```.
+Il parametro ```--hide``` nasconde l'ambiente alla esecuzione automatica di un file (utile se si creano finestre esterne nel sorgente per simulare una applicazione reale).
+
 ![immagine1](/images/duckquack2.png)
 {: .img-full}
+
+### Configurazione
+
+Nel file ```config/config.yml``` sono presenti delle impostazioni di avvio:
+
+```
+:title => 'DuckQuack',
+:width => 960,
+:height => 700,
+:size => 'window',
+:lang => 'en',
+:tab_chars => '  ',
+:database => 'duck_quack',
+:highlighting => { :async => false, :time => 300 },
+:code_runner  => { :async => true, :type => :task }, #or :type => :later or :type => :sync
+```
+
+Queste sono quelle predefinite.
 
 ### Codice
 
@@ -41,6 +62,7 @@ Il sistema prevede una certa personalizzazione che va dalla colorazione della si
 + ```./config/editor/ruby/syntax-specs.css```: *una serie di stili per la colorazione della sintassi*
 
 Nella stessa cartella un file ```code.yml``` permette di specificare una serie di righe predefinite da eseguire insieme al codice. Utile per eventuali *require* o *import* da usare in maniera predefinita.
+Si possono specificare anche dei blocchi di codice da inserire tramite la pressione del tasto ```Alt``` insieme ad una lettera o ```Alt+Shift``` ed una lettera, le definizioni sono nel file ```snippets.yml```. I caratteri sono autocompletabili tramite il file ```completes.yml```, utile per le parentesi per esempio: inserendo una parentesi ```(``` verrà inserito ```()``` con il cursore posizionato al centro.
 
 ![immagine2](/images/duckquack3.png)
 {: .img-full}
@@ -75,6 +97,7 @@ Sono presenti alcune primitive per la creazione di interfacce grafiche all'inter
 + ```show_main_stage``` (mostra la finestra principale)
 + ... (fare riferimento al file ```app/helpers/running_code_helpers.rb```)
 
+La documentazione *rdoc* generata è nella cartella ```doc```.
 Ogni nome di funzione aggiunta nei vari modi è localizzabile nel suo nome con i meccanismi accennati prima.
 Ovviamente tutto questo salvo bachi.
 
