@@ -229,7 +229,7 @@ Quale genere? Se maschile e femminile non vedo intellettualmente differenza.
 
 Nella scuola primaria non si pone il problema con gli alunni. Potremmo porlo come insegnanti 99% femminile. Bogliolo ne ha creato il suo target con successo.
 
-### 1.8.5. Walter
+### Walter
 {: .heading-3}
 
 
@@ -536,25 +536,11 @@ L'applicazione può essere trasversale ma ci vorrebbero ore dedicate per la form
 
 Il coding è uno strumento o un obiettivo?
 
-### 1.18.5. Walter
+### Walter
 {: .heading-3}
 
-
-Se stiamo pensando di comprimere le ore dedicate alle tradizionali per includervi il "coding" siamo prigionieri dello storytelling del marketing tecnologico. Anche in un mondo ideale, prima di affrontarlo dal punto di vista della programmazione occorre conoscere il dominio di studio. È chiaro che la programmazione sia applicabile a qualsiasi ambito. Ma un conto sono possibili progetti transdisciplinari, un conto è pretendere che tutti gli insegnanti possiedano le competenze di programmazione che permettano loro di applicarla nel loro perciso ambito di competenza: questo semplicemente  non è possibile prima di un completo ricambio generazionale, e forse nemmeno allora. ### 1.19.5. Walter
-{: .heading-3}
-
-
-Prima di tutto occorre definire un curricolo per i docenti, sia che si
-voglia includere programmazione come materia sia che non si voglia
-farlo. Cosa deve sapere di "digitale" e di programmazione un docente
-oggi? Fino a che la programmazione non diventa materia di studio, il
-curricolo può al massimo essere "digitale", nel senso di tecnologie e
-non di strumenti. Dopodiché il curricolo deve essere definito a livello
-Ministeriale, e al suo interno ogni docente dispone della propria
-libertà didattica.
+Se stiamo pensando di comprimere le ore dedicate alle tradizionali per includervi il "coding" siamo prigionieri dello storytelling del marketing tecnologico. Anche in un mondo ideale, prima di affrontarlo dal punto di vista della programmazione occorre conoscere il dominio di studio. È chiaro che la programmazione sia applicabile a qualsiasi ambito. Ma un conto sono possibili progetti transdisciplinari, un conto è pretendere che tutti gli insegnanti possiedano le competenze di programmazione che permettano loro di applicarla nel loro perciso ambito di competenza: questo semplicemente  non è possibile prima di un completo ricambio generazionale, e forse nemmeno allora.
 A meno che, nel"coding" non si faccia ricadere l'uso di questa o quella webapp. E allora occorre ripetere che non è lo strumento che conta, ma l'abilità che viene sviluppata. Il docente di Storia deve insegnare la storia. Se lo fa con l'ausilio di un software bene, ma la misura del suo lavoro sono le competenze di Storia degli alunni. L'uso di strumenti "nuovi" non può assolutamente scusare una compressione del programma svolto.
-
-
 
 ## 19. Deve esserci un "curriculum" uguale per tutti, o ogni scuola (ogni insegnante) può definire quello più adeguato al contesto?
 {: .heading-2}
@@ -582,10 +568,7 @@ Un curriculum digitale sì. Un curricolo di coding no.
 ### Walter
 {: .heading-3}
 
-
 Prima di tutto occorre definire un curricolo per i docenti, sia che si voglia includere programmazione come materia sia che non si voglia farlo. Cosa deve sapere di "digitale" e di programmazione un docente oggi? Fino a che la programmazione non diventa materia di studio, il curricolo può al massimo essere "digitale", nel senso di tecnologie e non di strumenti. Dopodiché il curricolo deve essere definito a livello Ministeriale, e al suo interno ogni docente dispone della propria libertà didattica.
-
-
 
 ## 20. Può insegnare il coding chiunque? se no, solo chi ha ricevuto una formazione specifica, oppure solo chi ha una competenza informatica più generale?
 {: .heading-2}
@@ -617,7 +600,7 @@ Se con "coding" si intende la programazione, che senso ha questa domanda? Uno st
 
 Mi sembra comunque necessario che esista anche un curricolo di competenze digitali (a costo di ripetermi, **non** legate a specifici prodotti) per i docenti.
 
-## 21. L'approccio per problemi di complessità successiva è l'unico possibile?\*
+## 21. L'approccio per problemi di complessità successiva è l'unico possibile?
 {: .heading-2}
 
 ### Stefano
@@ -671,7 +654,7 @@ Credo che debbano essere valutati per le strutture analitiche prodotte e non per
 
 Verificare i lavori fatti e la loro efficacia è di per sé una valutazione rispettosa della crescita individuale.
 
-### 1.22.5. Walter
+### Walter
 {: .heading-3}
 
 
