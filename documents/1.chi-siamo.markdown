@@ -33,7 +33,7 @@ Vorremmo che la nostra azione fosse **culturale** in prima istanza, ma anche **t
 + [Saverio Faniglulio]() (*Insegnante Secondaria di primo grado*
 + [Stefano Penge](http://steve.lynxlab.com/) (*Architetto software, insegnante e ricercatore con esperienza in sistemi di e-learning open-source*)
 + [Vicenzina Pace]() (*Insegnante*)
-+ [Walter Vannini](http://www.mind-spa.it) (*Consulente informatico specializzato in data-driven business*)
++ [Walter Vannini](http://www.mind-spa.it) (*Consulente informatico specializzato in data-driven business e Insegnante*)
 {: .no-bullet}
 
 Chi volesse sottoscrivere questa iniziativa può mandare una email a [info@codingmonamour.org](mailto:info@codingmonamour.org?subject=[#codingmonamour:subscription:ok]) indicando il nome e la qualifica ed un eventuale url di un blog, social network o sito web.

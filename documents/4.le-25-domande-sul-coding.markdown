@@ -1,8 +1,8 @@
-# Le 25 domande sul coding (con qualche risposta a caldo)
+Le 25 domande sul coding (con qualche risposta a caldo)
 {: .heading-0}
 
 ## 1. Pensiero computazionale e pensiero logico/matematico sono sinonimi? se no, quali sono le differenze?
-{: .heading-2-top} 
+{: .heading-2-top}
 
 ### Stefano
 {: .heading-3-top}
@@ -22,7 +22,14 @@ Non si dovrebbe compartimentizzare ed occorrerebbe parlare di pensiero umano e b
 ### Francesca
 {: .heading-3}
 
-Nella scuola primaria occorre attivare il pensiero, in generale. 
+Nella scuola primaria occorre attivare il pensiero, in generale.
+
+### Walter
+{: .heading-3}
+
+Credo che la scelta di una parola come "computazionale" cozzi con lo sforzo che vedo di fare finta che non si stia parlando di programmare computer. La definizione della Wang, secondo cui dovrei esplicitare un problema come se dovessi farlo eseguire da *un'altra persona* è fuorviante, perché con un interlocutore umano non ho alcun bisogno della *profonda* del problema che mi è invece necessaria per creare un programma risolva il problema. Nel merito, no. Il pensiero logico-matematico è più formale ma può permettersi di tralasciare moltissimi dettagli senza i quali la programmazione rimane solo "specifiche di alto livello". Penso al tempo e alle risorse, per esempio.
+
+Sono d'accordo con Massimo: c'è il pensiero e basta, il resto sono solo contesti d'uso.
 
 ## 2. Imparare a programmare a scuola è utile in sé, oppure solo nel contesto di un dominio (fisica, geometria, &#x2026;)?
 {: .heading-2}
@@ -47,6 +54,12 @@ Imparare a programmare i computer è utile in sé ed uno dei primi vantaggi poss
 
 Imparare a programmare è utile per la pianificazione di attività, la soluzione di problemi, la visione delle risorse disponibili. Programmare non è sinonimo di programmare software.
 
+### Walter
+{: .heading-3}
+
+Programmare software è utile in sé. La pianificazione è anch?essa utile, ma è un'altra cosa. Programmare software è utile perché, a differenza di qualsiasi altra cosa (forse con la sola eccezione della dimostrazione di teoremi) richiede una comprensione assoluta del problema in ogni suo dettaglio.
+
+Chi scrive un programma per il problema X  diventa un esperto di X. Questo è utile in modo diretto perché sviluppa la capacità di concentrazione, di analisi e di gestione della complessità; e in modo indiretto perché fa scoprire la distanza fra "conoscere una cosa" e "*conoscere* una cosa". 
 
 ## 3. Il coding è utile solo in campo scientifico? Se no, in quali altri campi?
 {: .heading-2}
@@ -70,7 +83,12 @@ Occorre mettersi d'accordo su cosa sia 'coding' per prima cosa. In ogni caso cre
 ### Francesca
 {: .heading-3}
 
-Se intendiamo la “macchina” come automa in grado di ripetere le stesse operazioni, occorre ricercare quali sono le variabili “ripetitive” nelle diverse discipline e se abbia senso e ricadute sugli apprendimenti spendere tempo e risorse per realizzare progetti. 
+Se intendiamo la “macchina” come automa in grado di ripetere le stesse operazioni, occorre ricercare quali sono le variabili “ripetitive” nelle diverse discipline e se abbia senso e ricadute sugli apprendimenti spendere tempo e risorse per realizzare progetti.
+
+### Walter
+{: .heading-3}
+
+Il computer è uno strumento universale, ovvero applicabile a qualsiasi contesto. La programmazione è la quarta gamba dell'istruzione dopo "leggere, scrivere e far di conto".
 
 ## 4. È più importante risolvere problemi dati o creare strutture originali con comportamenti emergenti?
 {: .heading-2}
@@ -93,7 +111,12 @@ Ambedue. La creazione di strutture originali porta a problemi da risolvere, come
 ### Francesca
 {: .heading-3}
 
-L’esecuzione del “compito” assegnato non porta necessariamente ad un incremento della capacità di porre domande. E’ importante sviluppare, nel corso del ciclo della scuola primaria, la capacita di problematizzare la realtà. 
+L’esecuzione del “compito” assegnato non porta necessariamente ad un incremento della capacità di porre domande. E’ importante sviluppare, nel corso del ciclo della scuola primaria, la capacita di problematizzare la realtà.
+
+### Walter
+{: .heading-3}
+
+Io vedo che con "coding" si cerca di promuovere un approccio del tipo "traduci questo procedimento in codice". Il che spiega perché aborro il termine (peraltro non usato dagli informatici). Mentre quello che sembra venire proposto fa molto "fabbrica del software", approcciare la soluzione di un problema tramite un programma è un'attività assolutamente creativa e allo stesso tempo assolutamente rigorosa, quindi la distinzione della domanda non si pone.
 
 ## 5. È più importante saper progettare un algoritmo o saperlo scrivere correttamente? E da dove bisogna cominciare?
 {: .heading-2}
@@ -118,6 +141,11 @@ Si deve saper progettare un algoritmo in prima istanza, lo scriverlo correttamen
 
 Nella scuola primaria comprendere semplici algoritmi, descriverli e/o riprodurli attraverso la programmazione potrebbe avere una valenza positiva e utile.
 
+### Walter
+{: .heading-3}
+
+Ideare un algoritmo e implementarlo (scusate il puntiglio linguistico) sono due attività distinte, che possono essere affrontate in momenti distinti. Inoltre, il fatto di ideare un algoritmo non implica la capacità di implementarlo, né che la propria implementazione sia migliore di un'altra. Spesso, anzi, implementazioni successive di uno stesso algoritmo producono miglioramenti in termini di tempo di calcolo e di risorse.
+
 ## 6. La capacità di leggere un codice sorgente scritto da altri è uno degli obiettivi del coding?
 {: .heading-2}
 
@@ -139,7 +167,14 @@ Non mi pare lo sia, ma dovrebbe esserlo. Come si è in grado di leggere libri sc
 ### Francesca
 {: .heading-3}
 
-Imparare a leggere un codice sorgente programmato da altri (parliamo di cose semplici!!) può aiutare la comprensione del codice stesso. 
+Imparare a leggere un codice sorgente programmato da altri (parliamo di cose semplici!!) può aiutare la comprensione del codice stesso.
+
+### Walter
+{: .heading-3}
+
+Io devo ancora capire cosa sia questo "coding". Se parliamo, come dovremmo, di programmazione, allora sì. Leggere codice di altri è un modo per imparare a collaborare, per imparare a creare materiali che non siano del tipo "ma io lo capisco", e per imparare a programmare meglio.
+
+Il codice è un linguaggio, e come tale riflette lo stile cognitivo di chi lo usa. Leggere codice scritto da un'altra persona è come leggere un libro: apre una finestra sull'anima dell'autore.
 
 ## 7. Quanto conta nell'efficacia delle attività di coding l'aspetto affettivo (l'entusiasmo, il divertimento, la piacevolezza, la facilità, il rafforzamento dell'autostima)?
 {: .heading-2}
@@ -162,7 +197,14 @@ Molto, la gratificazione è un molla imprescindibile. La gratificazione però no
 ### Francesca
 {: .heading-3}
 
-Con i bambini l’aspetto ludico ha un grande peso, soprattutto all’inizio delle attività percepite come “games”. Di fronte allo sforzo cognitivo che l’attività necessariamente richiede quando diventa più complessa, l’entusiasmo generale si ridimensiona. 
+Con i bambini l’aspetto ludico ha un grande peso, soprattutto all’inizio delle attività percepite come “games”. Di fronte allo sforzo cognitivo che l’attività necessariamente richiede quando diventa più complessa, l’entusiasmo generale si ridimensiona.
+
+### Walter
+{: .heading-3}
+
+
+C'è l'entusiasmo della novità e del divertimento, e c'è l'entusiasmo della sfida intellettuale. Il primo non è strettamente necessario, perché la programmazione non è una forma di intrattenimento; il secondo sì. L'aspetto affettivo superficiale (il solo che viene promosso dal movimento del "coding") può essere utile se porta il ragazzo a scoprire il fascino di una sfida intellettuale. 
+
 
 ## 8. Gli aspetti di genere vanno presi in considerazione? Se si, come?
 {: .heading-2}
@@ -185,7 +227,16 @@ Quale genere? Se maschile e femminile non vedo intellettualmente differenza.
 ### Francesca
 {: .heading-3}
 
-Nella scuola primaria non si pone il problema con gli alunni. Potremmo porlo come insegnati 99% femminile. Bogliolo ne ha creato il suo target con successo. 
+Nella scuola primaria non si pone il problema con gli alunni. Potremmo porlo come insegnanti 99% femminile. Bogliolo ne ha creato il suo target con successo.
+
+### 1.8.5. Walter
+{: .heading-3}
+
+
+È un problema che si pone solo dopo la primaria. In effetti, il solo motivo fondato per proporre programmazione e/o informatica alla primaria potrebbe essere lo sruttamento della grande disparità cognitiva fra ragazzi e ragazze nella primaria e secondaria di I grado, a favore delle seconde. Scoprire di essere brave in attività che più avanti sarebbero classificate come "da maschi" potrebbe essere un incentivo a non abbandonarle una volta che l'identità sociale propone una più rigida distinzione di genere.
+
+Superata la secondaria di I grado è necessario sottolineare il contributo femminile alla disciplina, che è stato enorme, e possibilmente incentivare la partecipazione femminile.
+
 
 ## 9. La modalità cosiddetta "visuale" è fondamentale solo per i più piccoli o introduce vantaggi in generale (es. l'impossibilità di commettere errori di sintassi)?
 {: .heading-2}
@@ -209,8 +260,18 @@ La modalità visuale può essere adatta in bambini piccoli con capacità di scri
 ### Francesca
 {: .heading-3}
 
-Per i più piccoli è un facilitatore. 
+Per i più piccoli è un facilitatore.
 
+### Walter
+{: .heading-3}
+
+
+Il visuale abbassa i requisiti iniziali ma poi presenta alcuni ostacoli:
+
+1.  catalizza l'attenzione sugli aspetti visuali del contenuto (e.g. ogni attimo disponibile per sprite, sfondi e suoni, il minimo indispensabile e controvoglia per lo script) 
+2.  rende più lento lo sviluppo una volta acquisita una certa pratica 
+3.  rendendo trasparente e immediato il livello sintattico, non abitua a     considerare necessaria l'attenzione, perché l'atto motorio dopo un po' diventa automatico. Questo rende molto più difficile (e più oneroso, perché stravolge la modalità acquisita) affrontare gliinevitabili errori di livello logico
+4.  mentre i meno portati per la programmazione hanno questi problemi,     quelli più portati si sentono presto limitati da uno strumento che     percepiscono "da bambini" (e che viene proposto come tale) 
 
 ## 10. Vanno usati ambienti (e linguaggi) diversi in base all'età? se si, secondo quale principio (es. andare verso linguaggi "veri" e richiesti dal mercato, oppure linguaggi più potenti, o più specifici per un certo dominio)?
 {: .heading-2}
@@ -234,7 +295,16 @@ Ogni età può avere il suo linguaggio. Visuale all'inizio ma testuale od al mas
 ### Francesca
 {: .heading-3}
 
-Ambienti diversi, ma semplici, possono essere utilizzati anche per mostrare rappresentazioni diverse per gli stessi scopi. 
+Ambienti diversi, ma semplici, possono essere utilizzati anche per mostrare rappresentazioni diverse per gli stessi scopi.
+
+### Walter
+{: .heading-3}
+
+
+Se il mercato richiede specifiche figure, può pagare per formarle; l'ultima volta che ho controllato, "mercato" significava questo. Lo scopo della programmazione e dell'informatica nella scuola non è formare futuri programmatori, ma includere nel programma la principale modalità intellettuale di questo secolo. **Il computer è uno strumento per pensare. La programmazione è costruzione ed esplorazione di mondi, il resto è regolazione del termostato.**
+
+In questo senso, la programmazione richiede strutture cognitive che non sono presenti prima del livello della secondaria di I grado. Lo scopo di introdurre alcune attività, in particolare quelle che richiedono una maggiore manualità, nella scuola primaria, dovrebbe essere di abituare a un rapporto con le macchine attivo anziché passivo.
+
 
 ## 11. Il coding senza computer (unplugged) è un passaggio necessario o facoltativo?
 {: .heading-2}
@@ -257,7 +327,7 @@ Rimane il dubbio su cosa sia 'coding'. Nel suo significato originario forse no, 
 ### Francesca
 {: .heading-3}
 
-Nella scuola primaria riprenderei principalmente il vecchio flow chart. Unplugged, di semplice realizzazione e ottima simulazione del “programma”. 
+Nella scuola primaria riprenderei principalmente il vecchio flow chart. Unplugged, di semplice realizzazione e ottima simulazione del “programma”.
 
 ## 12. Quanto è importante la possibilità di identificazione dello studente con un avatar (tarturuga, gatto, robot)?
 {: .heading-2}
@@ -280,7 +350,15 @@ Lo studente deve mantenere le distanze e comprendere che un avatar è un avatar,
 ### Francesca
 {: .heading-3}
 
-Al di là di quello che può sembrare, l’avatar mette una distanza emotiva tra l’alunno e il programma, e potrebbe reggere meglio la frustrazione dell’errore. 
+Al di là di quello che può sembrare, l’avatar mette una distanza emotiva tra l’alunno e il programma, e potrebbe reggere meglio la frustrazione dell’errore.
+
+### Walter
+{: .heading-3}
+
+
+Per i primi esercizi di avviamento, penso in particolare alla definizione di percorsi o a contesti in cui le metafore spaziali siano di aiuto (il che copre quasi tutto quello che si fa attualmente con Scratch) l'avatar è utile. Questo non implica alcuna particolare sofisticazione grafica, una semplice figura geometrica come un triangolo è sufficiente.
+
+Ma mentre l'identificazione con un oggetto computazionale è sempre concettuale, è solo raramente visuale o fisica. Con l'uso di molteplici strutture dati complesse e la creazione di una molteplicità di oggetti computazionali interagenti, non parlerei più "identificazione", ma di "immedesimazione", che permetta al programmatore di spostre la propria attenzione dal punto di vista dell'oggetto a quello di un altro, a seconda del flusso computazionale che sta emulando nella propria mente.
 
 ## 13. Che rapporto c'è fra coding e robotica educativa (sono indipendenti, sono uno dentro l'altro, sono connessi)?
 {: .heading-2}
@@ -303,8 +381,16 @@ Sempre il problema di cosa sia il 'coding'. Potrebbero essere indipendenti o con
 ### Francesca
 {: .heading-3}
 
-Il termine “robotica educativa” non lo capisco. parliamo di macchine (anche costose) pensate per essere vendute alle scuole e che potrebbero diventare educative… ma anche diseducative. In questo occorre proporre attività educative amplificate dall’utilizzo di automi programmati. 
+Il termine “robotica educativa” non lo capisco. parliamo di macchine (anche costose) pensate per essere vendute alle scuole e che potrebbero diventare educative… ma anche diseducative. In questo occorre proporre attività educative amplificate dall’utilizzo di automi programmati.
 
+### Walter
+{: .heading-3}
+
+Se con "robotica educativa" intendiamo la programmazione di robot, ragazzi che già dispongono di competenze di programmazione possono trasportarle in questo ambito che però, al di là delle attività più semplici, propone difficoltà notevoli. Fare reale robotica è più che programmare un Lego Mindstorm o un mBot per fargli percorrere un dato percorso o attraversare un labirinto.
+
+I BeeBot sono accessibili anche a bambini della materna, ma propongono una programmazione molto limitata di tipo imperativo che non offre nessun vantaggio rispetto alla stessa attività realizzata (con molto più divertimento) in modalità unplugged.
+
+La robotica educativa, prima della secondaria di II grado, nasconde sotto il *glamour* degli strumenti utilizzati un tentativo di banalizzare e addomesticare il potenziale creativo e di pensiero critico-analitico della programmazione. 
 
 ## 14. Quanto è importante che il software usato abbia una licenza opensource?
 {: .heading-2}
@@ -328,7 +414,13 @@ Importantissimo. Bisogna stimolare nello studente l'eticità del software e biso
 ### Francesca
 {: .heading-3}
 
-Tanto. Troppo software che sta entrando nella scuola è di proprietà. 
+Tanto. Troppo software che sta entrando nella scuola è di proprietà.
+
+### Walter
+{: .heading-3}
+
+Molto importante. Per una attività cruciale come le tecnologie informatiche, la scuola pubblica non può dipendere dalle scelte di questo o quel produttore, né la sua attività educativa deve essere ridotta a un banale "addestramento", per quanto questo sia desiderabile dal "mercato". Detto in termini più diretti, a scuola si deve imparare cosa è un documento strutturato e come costruirlo, non a usare Word o Google Docs. Si deve imparare cosa sono email e cloud, non cosa sono Outlook, Gmail, OneCloud e GDrive. Inoltre è importante che sia la scuola pubblica a trasmettere il senso *politico ed etico* dell'Open Source: che la "proprietà intellettuale" non è realmente una "proprietà" e che il software è troppo importante per non essere sottoposto allo scrutinio di chiunque lo utilizzi.
+
 
 ## 15. Quanto è importante poter lavorare fuori rete, oppure poter installare un ambiente su server delle rete locale?
 {: .heading-2}
@@ -352,7 +444,14 @@ Se si parla della rete Internet, oggi sarebbe importante averla disponibile e di
 ### Francesca
 {: .heading-3}
 
-Poter lavorare fuori rete semplifica diversi aspetti. 
+Poter lavorare fuori rete semplifica diversi aspetti.
+
+### Walter
+{: .heading-3}
+
+La reale differenza non è cloud/non cloud ma locale/condiviso. Personalmente utilizzo soltanto servizi via browser, ma se la scuola fosse in una situazione di *digital divide*, potrei riportare quegli stessi servizi su un server locale e lavorare sulla rete locale.
+
+Il problema è piuttosto un altro: possiamo continuare ad avere scuole in cui non esiste né la figura di un responsabile informatico né un budget adeguato?
 
 
 ## 16. Che rapporto ci può/deve essere tra coding e sviluppo di app per il mobile?
@@ -376,7 +475,14 @@ Cosa è il 'coding'? Le applicazioni per il mobile si sviluppano comunque.
 ### Francesca
 {: .heading-3}
 
-Nella scuola primaria? 
+Nella scuola primaria?
+
+### Walter
+{: .heading-3}
+
+
+Mi sembra che anche questa tendenza, come quella della robotica, risponda più a criteri di moda che di utilità didattica. Che senso ha mettere dei ragazzini a sviluppare app, considerando che la maggioranza dello sforzo di sviluppo ricade sulla parte grafica e di interfaccia anziché sulla parte di funzionalità? Forse quella di ottenere il plauso dei genitori che riescono a "toccare con mano" qualche risultato? Vale quando ho detto alla domanda 14: la scuola pubblica deve insegnare competenze generali, non seguire la moda del momento (e le "app" indiscutibilmente lo sono --peraltro, in calo).
+
 
 ## 17. Da che età è possibile cominciare?
 {: .heading-2}
@@ -398,7 +504,13 @@ Penso che si possa non appena si siano acquisite delle competenze in lettura e s
 
 ### Francesca
 {: .heading-3}
-Ragionare sulla soluzione dei problemi non necessariamente attraverso il coding  e non solo di tipo matematico permette anche agli alunni più piccoli un approccio più pragmatico al mondo. 
+Ragionare sulla soluzione dei problemi non necessariamente attraverso il coding  e non solo di tipo matematico permette anche agli alunni più piccoli un approccio più pragmatico al mondo.
+
+### Walter
+{: .heading-3}
+
+
+I primi rudimenti di pensiero analitico si possono proporre come attività unplugged anche alla materna o nei primi anni di primaria. Dalla mia esperienza, fin verso la IV/V Primaria si riesce ad andare poco oltre lezioni molto direttive, con scarso apporto da parte dei ragazzi al di là di questioni di grafica o di effetti. Questo non per limitazioni della tecnologia, ma per il fatto che la programmazione è una attività intellettuale estremamente sofisticata, che richiede strutture mentali altrettanto sofisticate. Risultati reali (ossia il gioco vale la candela) di un qualche significato didattico li vedo dalla I o II Secondaria di I Grado. Ma "coding alla primaria" suona molto più *disruptive.*
 
 
 ## 18. Il coding a scuola va affidato ad un'ora speciale o va praticato all'interno delle altre "ore"?
@@ -422,7 +534,27 @@ L'applicazione può essere trasversale ma ci vorrebbero ore dedicate per la form
 ### Francesca
 {: .heading-3}
 
-Il coding è uno strumento o un obiettivo? 
+Il coding è uno strumento o un obiettivo?
+
+### 1.18.5. Walter
+{: .heading-3}
+
+
+Se stiamo pensando di comprimere le ore dedicate alle tradizionali per includervi il "coding" siamo prigionieri dello storytelling del marketing tecnologico. Anche in un mondo ideale, prima di affrontarlo dal punto di vista della programmazione occorre conoscere il dominio di studio. È chiaro che la programmazione sia applicabile a qualsiasi ambito. Ma un conto sono possibili progetti transdisciplinari, un conto è pretendere che tutti gli insegnanti possiedano le competenze di programmazione che permettano loro di applicarla nel loro perciso ambito di competenza: questo semplicemente  non è possibile prima di un completo ricambio generazionale, e forse nemmeno allora. ### 1.19.5. Walter
+{: .heading-3}
+
+
+Prima di tutto occorre definire un curricolo per i docenti, sia che si
+voglia includere programmazione come materia sia che non si voglia
+farlo. Cosa deve sapere di "digitale" e di programmazione un docente
+oggi? Fino a che la programmazione non diventa materia di studio, il
+curricolo può al massimo essere "digitale", nel senso di tecnologie e
+non di strumenti. Dopodiché il curricolo deve essere definito a livello
+Ministeriale, e al suo interno ogni docente dispone della propria
+libertà didattica.
+A meno che, nel"coding" non si faccia ricadere l'uso di questa o quella webapp. E allora occorre ripetere che non è lo strumento che conta, ma l'abilità che viene sviluppata. Il docente di Storia deve insegnare la storia. Se lo fa con l'ausilio di un software bene, ma la misura del suo lavoro sono le competenze di Storia degli alunni. L'uso di strumenti "nuovi" non può assolutamente scusare una compressione del programma svolto.
+
+
 
 ## 19. Deve esserci un "curriculum" uguale per tutti, o ogni scuola (ogni insegnante) può definire quello più adeguato al contesto?
 {: .heading-2}
@@ -445,7 +577,14 @@ Penso che ogni insegnante debba valutare il proprio contesto pur all'interno di 
 ### Francesca
 {: .heading-3}
 
-Un curriculum digitale sì. Un curricolo di coding no. 
+Un curriculum digitale sì. Un curricolo di coding no.
+
+### Walter
+{: .heading-3}
+
+
+Prima di tutto occorre definire un curricolo per i docenti, sia che si voglia includere programmazione come materia sia che non si voglia farlo. Cosa deve sapere di "digitale" e di programmazione un docente oggi? Fino a che la programmazione non diventa materia di studio, il curricolo può al massimo essere "digitale", nel senso di tecnologie e non di strumenti. Dopodiché il curricolo deve essere definito a livello Ministeriale, e al suo interno ogni docente dispone della propria libertà didattica.
+
 
 
 ## 20. Può insegnare il coding chiunque? se no, solo chi ha ricevuto una formazione specifica, oppure solo chi ha una competenza informatica più generale?
@@ -469,7 +608,14 @@ Non può insegnarlo chiunque (ma sempre rimane la domanda su cosa sia il coding)
 ### Francesca
 {: .heading-3}
 
-Concordo con chi ha detto che prima di un curriculum dello studente deve essere previsto un curriculum per gli insegnanti. 
+Concordo con chi ha detto che prima di un curriculum dello studente deve essere previsto un curriculum per gli insegnanti.
+
+### Walter
+{: .heading-3}
+
+Se con "coding" si intende la programazione, che senso ha questa domanda? Uno storico può insegnare chimica? In compenso sappiamo che un informatico non può insegnare matematica, per effetto di che non ci sono informatici nella scuola, salvo qualche istituto tecnico dove l'insegnamento esiste. Inoltre cosa sarebbe la "competenza informatica più generale", l'ECDL? Andiamo avanti così, facciamoci del male.
+
+Mi sembra comunque necessario che esista anche un curricolo di competenze digitali (a costo di ripetermi, **non** legate a specifici prodotti) per i docenti.
 
 ## 21. L'approccio per problemi di complessità successiva è l'unico possibile?\*
 {: .heading-2}
@@ -494,6 +640,13 @@ Non necessariamente, si potrebbero proporre strade per complessità crescente ma
 
 No.
 
+### Walter
+{: .heading-3}
+
+
+Per nulla. Anzi, un problema che non si risolvere immediatamente è il modo migliore per incoraggiare l'esplorazione.
+
+
 ## 22. La valutazione delle attività degli studenti va fatta in maniera simile a quanto si fa nell'insegnamento tradizionale della programmazione? Se no, quali aspetti vanno valutati e come?
 {: .heading-2}
 
@@ -516,7 +669,20 @@ Credo che debbano essere valutati per le strutture analitiche prodotte e non per
 ### Francesca
 {: .heading-3}
 
-Verificare i lavori fatti e la loro efficacia è di per sé una valutazione rispettosa della crescita individuale. 
+Verificare i lavori fatti e la loro efficacia è di per sé una valutazione rispettosa della crescita individuale.
+
+### 1.22.5. Walter
+{: .heading-3}
+
+
+La valutazione di un progetto software avviene necessariamente su più fronti, come peraltro avviene anche in altre materie (à la "il procedimento è corretto, ma hai sbagliato i conti"). Siccome l'obiettivo non è soltanto fornire competenze di programmazione ma avvicinare all'uso del computer come protesi cognitiva, almeno i seguenti questi aspetti devono entrare nella valutazione:
+
+-   capacità di reperire e analizzare criticamente fonti di informazioni
+-   capacità di astrazione e modellazione del problema
+-   capacità di organizzazione e pianificazione del lavoro
+-   capacità di lavoro in coppia o gruppo
+-   qualità e stile della realizzazione.  
+
 
 ## 23. Serve un docente/tutor nelle attività di coding?
 {: .heading-2}
@@ -541,6 +707,13 @@ In affiancamento al docente? Se si parla di ragazzi lasciati da soli il docente 
 
 Dipende dal docente e dalla sua preparazione.
 
+### Walter
+{: .heading-3}
+
+
+Se si tratta di affrontare un'altra materia con strumenti informatici e di programmazione, e il docente non è in grado di farlo da solo, allora occorre che il docente sia affiancato da un tutor. In questo caso però potrebbe essere preferibile svilupare un progetto interdisciplinare. Se invece si parla di un progetto dove la programmazione è centrale, allora deve esserci un docente specifico.
+
+
 ## 24. Se no, è sufficiente un ambiente predisposto per gradi di difficoltà crescenti con adeguati help on line, oppure è fondamentale che ci siano delle comunità di apprendimento online?\*
 {: .heading-2}
 
@@ -563,6 +736,14 @@ Non credo sa sufficiente, il rapporto umano immediato è fondamentale. Si rischi
 {: .heading-3}
 
 Nella scuola primaria?
+
+### Walter
+{: .heading-3}
+
+
+Nella mia esperienza nei CoderDojo vedo che bambini di IV o V Primaria possono tranquillamente fare da tutor a bambini di III. Il problema è che non è chiaro come questo possa accadere durante un normale orario scolastico, in cui ciascuna classe deve seguire il proprio programma.
+
+In generale, occorre sviluppare modalità di lavoro che superino l'orribile "imparo al computer" à la MOOC/help online, che nelle scuole dell'obbligo non può fare altro che addestrare alla passività. Occorre educare alla produzione di software come sforzo comune, mai solo individuae. Nelle mie classi impongo il lavoro in coppie miste per genere, proprio per evitare che l'unità atomica sia il singolo.
 
 ## 25. Che ruolo possono avere gli studenti più avanzati?
 {: .heading-2}
@@ -587,3 +768,7 @@ Gli studenti dovrebbero essere stimolati al confronto ed alla collaborazione. Gl
 
 Il tutoraggio tra pari è di stimolo e consolidamento per gli alunni più in difficoltà al di là del coding.
 
+### Walter
+{: .heading-3}
+
+Nella mia esperienza, imparare da uno studente più grande è molto più efficace che imparare dal maestro. In questa modalità entrambe imparano: il "grande" la responsabilità, la capactà di esposizione e di adattarsi a un ritmo non proprio. Il "piccolo" non solo impara ciò che gli viene illustrato, ma anche il suo amor proprio ne viene rafforzato perché il "grande" che gli dedica il suo tempo è magari lo stesso che poi all'intervallo non gioca coi "piccoli". Gli stessi effetti positivi ci sono se il più avanzato è più giovane. Ho visto maschi di dodici anni in religiosa ammirazione di una femmina di 9.
