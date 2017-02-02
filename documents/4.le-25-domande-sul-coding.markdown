@@ -329,6 +329,11 @@ Rimane il dubbio su cosa sia 'coding'. Nel suo significato originario forse no, 
 
 Nella scuola primaria riprenderei principalmente il vecchio flow chart. Unplugged, di semplice realizzazione e ottima simulazione del “programma”.
 
+### Walter
+{: .heading-3}
+
+Nelle prime classi della primaria, trovo che l'unplugged sia preferibile. Coinvolge di più, non fa perdere tempo con apparecchiature, ed ha ampi spazi di manualità. Per contro, riduce tutto a una programmazione non solo imperativa, ma perfino banale (niente variabili, strutture dati ridotte all'osso). Dal punto di vista dell'informatica, diciamo che l'unplugged può servire a introdurre i concetti fondamentali sequenza-decisione-iterazione del teorema di Böhm -Jacopini, ma poco di più.
+
 ## 12. Quanto è importante la possibilità di identificazione dello studente con un avatar (tarturuga, gatto, robot)?
 {: .heading-2}
 
