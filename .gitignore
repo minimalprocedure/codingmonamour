@@ -10,6 +10,9 @@
 /test/version_tmp/
 /tmp/
 
+log/codingmonamour.polls.db.log
+db/codingmonamour.polls.db
+
 .sass-cache
 sass-cache
 *_flymake.css
