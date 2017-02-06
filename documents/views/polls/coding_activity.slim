@@ -1,0 +1,176 @@
+h1.heading-0 Censimento delle attività di coding
+
+form action="/polls/coding" method="POST"
+  h2 Contesto
+  .form-group.row
+    fieldset.col-xs-2
+      label Classe
+      input.form-control type="text" name="coding_activity_contexts_polls[class]"
+      span.help-block Indicare la classe.
+    fieldset.col-xs-5
+      label Scuola
+      input.form-control type="text" name="coding_activity_contexts_polls[school]"
+      span.help-block Nome della scuola.
+    fieldset.col-xs-3
+      label Città
+      input.form-control type="text" name="coding_activity_contexts_polls[city]"
+      span.help-block 
+    fieldset.col-xs-2
+      label Provincia
+      input.form-control type="text" name="coding_activity_contexts_polls[province]"
+      span.help-block Indicare la sigla
+
+  .form-group.row
+    fieldset.col-xs-2
+      label Età
+      input.form-control type="number" name="coding_activity_contexts_polls[average_age]"
+      span.help-block Età media partecipanti.
+    fieldset.col-xs-2
+      label Maschi
+      input.form-control type="number" name="coding_activity_contexts_polls[males]"
+      span.help-block Numero dei maschi
+    fieldset.col-xs-2
+      label Femmine
+      input.form-control type="number" name="coding_activity_contexts_polls[females]"
+      span.help-block Numero delle femmine
+
+    fieldset.col-xs-3      
+        label Data inizio
+        div.input-group.date.datetime-input
+          input.form-control type="datetime" name="coding_activity_contexts_polls[date_begin]"
+          span class="input-group-addon"
+            span class="glyphicon glyphicon-calendar"
+        span.help-block Data di inizio del contesto.
+
+    fieldset.col-xs-3      
+        label Data termine
+        div.input-group.date.datetime-input
+          input.form-control type="datetime" name="coding_activity_contexts_polls[date_end]"
+          span class="input-group-addon"
+            span class="glyphicon glyphicon-calendar"
+        span.help-block Data di termine del contesto.
+
+  h2 Competenze del docente
+
+  .form-group.row
+    fieldset.col-xs-2
+      label Età
+      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][age]"
+      span.help-block Indicare l'età
+    fieldset.col-xs-2
+      label Genere
+      select.form-control name="coding_activity_contexts_polls[teacher_skills][sex]"
+        option value="m" Maschile
+        option value="f" Femminile
+      span.help-block
+    fieldset.col-xs-4
+      label Ruolo o materia
+      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][role]"
+      span.help-block
+    fieldset.col-xs-4
+      label Gruppi
+      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][groups]"
+      span.help-block
+
+  .form-group.row
+    fieldset.col-xs-6
+      label Conoscenze
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[teacher_skills][knowledge]"
+      span.help-block
+    fieldset.col-xs-6
+      label Formazione
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[teacher_skills][training]"
+      span.help-block
+
+  h2 Progetto
+
+  .form-group.row
+    fieldset.col-xs-4
+      label Tempo previsto
+      input.form-control type="text" name="coding_activity_contexts_polls[projects][estimated_time_in_days]"
+      span.help-block
+    fieldset.col-xs-3      
+        label Data inizio
+        div.input-group.date.datetime-input
+          input.form-control type="datetime" name="coding_activity_contexts_polls[projects][date_begin]"
+          span class="input-group-addon"
+            span class="glyphicon glyphicon-calendar"
+        span.help-block
+    fieldset.col-xs-3      
+        label Data fine
+        div.input-group.date.datetime-input
+          input.form-control type="datetime" name="coding_activity_contexts_polls[projects][date_end]"
+          span class="input-group-addon"
+            span class="glyphicon glyphicon-calendar"
+        span.help-block
+
+  .form-group.row
+    fieldset.col-xs-4
+      label Obiettivo
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][goal]"
+      span.help-block
+    fieldset.col-xs-4
+      label Attività proposte
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][activity]"
+      span.help-block
+    fieldset.col-xs-4
+      label Buone pratiche
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][best_practices]"
+      span.help-block
+
+  .form-group.row
+    fieldset.col-xs-6
+      label Ambiente utilizzato
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][environments]"
+      span.help-block
+    fieldset.col-xs-6
+      label Strumenti di monitoraggio
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][monitorings]"
+      span.help-block
+
+  h2 Valutazione
+
+  .form-group.row
+    fieldset.col-xs-4
+      label Raggiungimento dell'obiettivo
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][goals]"
+      span.help-block
+    fieldset.col-xs-4
+      label Difficoltà principali incontrate
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][difficulties]"
+      span.help-block
+    fieldset.col-xs-4
+      label Risultati non previsti
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][unexpected]"
+      span.help-block
+
+  .form-group.row
+    fieldset.col-xs-6
+      label Commenti del docente
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][comments_teacher]"
+      span.help-block
+    fieldset.col-xs-6
+      label Commenti dei partecipanti
+      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][comments]"
+      span.help-block
+
+  h2 Sviluppi futuri
+
+  .form-group.row
+    fieldset.col-xs-4
+      label Prosecuzione dell'attività
+      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][activities]"
+      span.help-block
+    fieldset.col-xs-4
+      label Riuso dei prodotti
+      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][products_reuse]"
+      span.help-block
+    fieldset.col-xs-4
+      label Condivisione
+      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][sharing]"
+      span.help-block
+
+  .form-group.row
+    fieldset.col-xs-3.col-md-offset-9
+      input.form-control.btn.btn-default type="submit"
+

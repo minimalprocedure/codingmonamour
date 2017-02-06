@@ -52,6 +52,26 @@ class MainApplication < Sinatra::Base
     scss(:'stylesheets/documents')
   end
 
+  post '/polls/coding' do
+    p params
+    redirect '/polls/coding'
+  end
+  
+  get '/polls/coding' do
+    Database.connect_db_polls
+    a = CodingActivityContextsPoll.all.first
+    puts a.province
+    puts a.teacher_skills.age
+    puts a.projects.goal
+    puts a.ratings.goals
+    puts a.futures.activities
+    Database.disconnect_db_polls
+
+    layout = :'layouts/main'
+    content = slim(:'views/polls/coding_activity')
+    slim(layout, :locals => { :content => content })
+  end
+
   get '*' do  
     layout = :'layouts/main'
     begin

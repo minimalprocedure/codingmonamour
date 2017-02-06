@@ -10,27 +10,40 @@ RACK_ENV = ENV['RACK_ENV'] ||= 'development' unless defined?(RACK_ENV)
 ROOT_FOLDER = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 APP_FOLDER = File.join(ROOT_FOLDER, 'application')
 HELPERS_FOLDER = File.join(APP_FOLDER, 'helpers')
+VIEWS_FOLDER = File.join(APP_FOLDER, 'views')
 LIB_FOLDER = File.join(ROOT_FOLDER, 'lib')
 CONFIG_FOLDER = File.join(ROOT_FOLDER, 'config')
 DOC_FOLDER = File.join(ROOT_FOLDER, 'documents')
 PUB_FOLDER = File.join(ROOT_FOLDER, 'public')
+DB_FOLDER = File.join(ROOT_FOLDER, 'db')
+DB_SCHEMAS_FOLDER = File.join(CONFIG_FOLDER, 'schemas')
+DB_MODELS_FOLDER = File.join(CONFIG_FOLDER, 'models')
+LOG_FOLDER = File.join(ROOT_FOLDER, 'log')
 
 [  
   LIB_FOLDER, 
   CONFIG_FOLDER,
+  DB_SCHEMAS_FOLDER,
+  DB_MODELS_FOLDER,
   APP_FOLDER
 ].each {|path|
   $LOAD_PATH << path unless $LOAD_PATH.include?(path)
 }
 Dir[File.join(LIB_FOLDER, '*.rb')].each { |h| require(h) }
 
+require 'logger'
 require 'sinatra'
 require 'sinatra/base'
 require 'slim'
 require 'yaml'
+require 'sequel'
 
-class MainApplication < Sinatra::Base  
-  
+class MainApplication < Sinatra::Base
+
+  require 'database'
+
+  include Database
+ 
   set :logging, true
   set :static, true
   set :root, ROOT_FOLDER
@@ -78,7 +91,7 @@ class MainApplication < Sinatra::Base
   end
 
   puts "Running in #{settings.environment}"
-
+  
   run! if app_file == $0
 end
 

@@ -18,6 +18,7 @@ html class="no-js" lang="#{m_string(:language, :sep => ',')}" dir="ltr"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     link rel="stylesheet" href="/stylesheets/bootstrap.css"
     link rel="stylesheet" href="/stylesheets/bootstrap-theme.css"
+    link rel="stylesheet" href="/stylesheets/bootstrap-datetimepicker.min.css"
     link rel="stylesheet" href="/javascripts/highlight/styles/ocean.css"    
     link rel="stylesheet" href="/stylesheets/application.css"
     link rel="stylesheet" href="/stylesheets/documents.css?#{String.random(12)}"
@@ -57,7 +58,14 @@ html class="no-js" lang="#{m_string(:language, :sep => ',')}" dir="ltr"
 
 
     script src="/javascripts/jquery-3.1.1.min.js"
+    script src="/javascripts/moment.js"
+    //script src="/javascripts/moment-with-locales.min.js"
     script src="/javascripts/highlight/highlight.pack.js"
     script src="/javascripts/bootstrap.js"
+    script src="/javascripts/bootstrap-datetimepicker.min.js"
     script src="/javascripts/application.js"
+    javascript:
+      $(function() {
+        $('.datetime-input').datetimepicker();
+      });
 

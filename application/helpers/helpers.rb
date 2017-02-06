@@ -90,7 +90,7 @@ module Helpers
   end
 
   def find_docs_and_dirs(base, ext = :markdown)
-    ignore = ['errors','layouts','stylesheets','\.disabled$']
+    ignore = ['views', 'errors','layouts','stylesheets','\.disabled$']
     rev_root = File.join(DOC_FOLDER, base)
     
     docs = Dir[File.join(rev_root, "*.#{ ext.to_s }")].natural_sort
