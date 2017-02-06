@@ -38,7 +38,7 @@ module Database
 
   def self.connect_db_polls    
     name = "codingmonamour.polls.db"
-    Sequel::Model.db_polls = Sequel.connect("sqlite://" + File.join(DB_FOLDER, name),  :loggers => [Logger.new(File.join(LOG_FOLDER, "${name}.log"))]) unless Sequel::Model.db_polls
+    Sequel::Model.db_polls = Sequel.connect("sqlite://" + File.join(DB_FOLDER, name),  :loggers => [Logger.new(File.join(LOG_FOLDER, "#{name}.log"))]) unless Sequel::Model.db_polls
   end
   connect_db_polls 
 
