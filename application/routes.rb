@@ -58,14 +58,9 @@ class MainApplication < Sinatra::Base
   end
   
   get '/polls/coding' do
-    Database.connect_db_polls
-    a = CodingActivityContextsPoll.all.first
-    puts a.province
-    puts a.teacher_skills.age
-    puts a.projects.goal
-    puts a.ratings.goals
-    puts a.futures.activities
-    Database.disconnect_db_polls
+    #Database.connect_db_polls
+    #a = CodingActivityContextsPoll.all.first
+    #Database.disconnect_db_polls
 
     layout = :'layouts/main'
     content = slim(:'views/polls/coding_activity')
