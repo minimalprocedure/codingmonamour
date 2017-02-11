@@ -1,176 +1,283 @@
 h1.heading-0 Censimento delle attività di coding
 
+==styled_flash
+
 form action="/polls/coding" method="POST"
   h2 Contesto
   .form-group.row
     fieldset.col-xs-2
-      label Classe
-      input.form-control type="text" name="coding_activity_contexts_polls[class]"
-      span.help-block Indicare la classe.
+      label Classe*
+      select.form-control type="text" name="activity[classroom]"
+        ruby:
+          options = [["0", "Non applicabile"],["1", "Prima"],["2", "Seconda"],
+            ["3", "Terza"],["4", "Quarta"],["5", "Quinta"]]
+        - options.each do |n|
+          - if params[:activity][:classroom].to_s == n[0]
+            option value="#{n[0]}" selected="1"
+              =n[1]
+          - else
+            option value="#{n[0]}"
+              =n[1]  
+      span.help-block Scegliere la classe.
     fieldset.col-xs-5
-      label Scuola
-      input.form-control type="text" name="coding_activity_contexts_polls[school]"
+      label Scuola*      
+      select.form-control type="text" name="activity[school]"
+        ruby:
+          options = ["Non applicabile", "Scuola dell'Infanzia","Scuola primaria","Scuola secondaria di primo grado",
+            "Scuola secondaria di secondo grado","Liceo artistico","Liceo classico","Liceo linguistico",
+            "Liceo musicale e coreutico","Liceo scientifico","Liceo scienze umane","Istituto tecnico","Istituto professionale",
+            "Scuole con indirizzo informatico"]
+        - options.each do |n|
+          - if params[:activity][:school].to_s == n
+            option value="#{n}" selected="1"
+              =n
+          - else
+            option value="#{n}"
+              =n  
       span.help-block Nome della scuola.
     fieldset.col-xs-3
       label Città
-      input.form-control type="text" name="coding_activity_contexts_polls[city]"
-      span.help-block 
+      input.form-control type="text" name="activity[city]" value=params[:activity][:city]
+      span.help-block Nome della città in cui risiede la scuola.
     fieldset.col-xs-2
-      label Provincia
-      input.form-control type="text" name="coding_activity_contexts_polls[province]"
-      span.help-block Indicare la sigla
+      label Provincia*
+      select.form-control type="number" name="activity[province]"
+        ruby:
+          options = [["Non applicabile","0"],["Agrigento","AG"],["Alessandria","AL"],["Ancona","AN"],["Aosta","AO"],["Arezzo","AR"],["Ascoli Piceno","AP"],
+            ["Asti","AT"],["Avellino","AV"],["Barletta-Andria-Trani","BT"],["Belluno","BL"],["Benevento","BN"],["Bergamo","BG"],
+            ["Biella","BI"],["Bolzano","BZ"],["Brescia","BS"],["Brindisi","BR"],["Caltanissetta","CL"],["Campobasso","CB"],["Caserta","CE"],
+            ["Catanzaro","CZ"],["Chieti","CH"],["Como","CO"],["Cosenza","CS"],["Cremona","CR"],["Crotone","KR"],["Cuneo","CN"],
+            ["Enna","EN"],["Fermo","FM"],["Ferrara","FE"],["Foggia","G"],["Forlì-Cesena","FC"],["Frosinone","FR"],["Gorizia","GO"],
+            ["Grosseto","GR"],["Imperia","IM"],["Isernia","IS"],["La Spezia","SP"],["L'Aquila","AQ"],["Latina","LT"],["Lecce","LE"],
+            ["Lecco","LC"],["Livorno","LI"],["Lodi","LO"],["Lucca","LU"],["Macerata","MC"],["Mantova","MN"],["Massa e Carrara","MS"],
+            ["Matera","MT"],["Modena","MO"],["Monza e Brianza","MB"],["Novara","NO"],["Nuoro","NU"],["Oristano","OR"],["Padova","PD"],
+            ["Parma","PR"],["Pavia","PV"],["Perugia","PG"],["Pesaro e Urbino","PU"],["Pescara","PE"],["Piacenza","PC"],["Pisa","PI"],
+            ["Pistoia","PT"],["Pordenone","PN"],["Potenza","PZ"],["Prato","PO"],["Ragusa","RG"],["Ravenna","RA"],["Reggio Emilia","RE"],
+            ["Rieti","RI"],["Rimini","RN"],["Rovigo","RO"],["Salerno","SA"],["Sassari","SS"],["Savona","SV"],["Siena","SI"],["Siracusa","SR"],
+            ["Sondrio","SO"],["Taranto","TA"],["Teramo","TE"],["Terni","TR"],["Trapani","TP"],["Trento","TN"],["Treviso","TV"],
+            ["Trieste","TS"],["Udine","UD"],["Varese","VA"],["Verbano-Cusio-Ossola","VB"],["Vercelli","VC"],["Verona","VR"],
+            ["Vibo Valentia","VV"],["Vicenza","VI"],["Viterbo","VT"]]
+        - options.each do |n|
+          - if params[:activity][:province].to_s == n[1]
+            option value="#{n[1]}" selected="1"
+              =n[0]
+          - else
+            option value="#{n[1]}"
+              =n[0] 
+      span.help-block Indicare la provincia dove risiede la scuola.
 
   .form-group.row
     fieldset.col-xs-2
-      label Età
-      input.form-control type="number" name="coding_activity_contexts_polls[average_age]"
-      span.help-block Età media partecipanti.
+      label Età media*
+      select.form-control type="number" name="activity[average_age]"
+        ruby:
+          options = [["0", "Non applicabile"],["3-6", "3-6"],["6-9", "6-9"],["9-12", "9-12"],["12-15", "12-15"],
+            ["15-18", "15-18"],["18-21", "18-21"],["21-25", "21-25"],["25-35", "25-35"],
+            ["35-45", "35-45"],["45-55", "45-55"],["55-100", "Oltre 55"]]
+        - options.each do |n|
+          - if params[:activity][:average_age].to_s == n[0]
+            option value="#{n[0]}" selected="1"
+              =n[1]
+          - else
+            option value="#{n[0]}"
+              =n[1] 
+      span.help-block Età media dei partecipanti arrotondata all'intero.
     fieldset.col-xs-2
-      label Maschi
-      input.form-control type="number" name="coding_activity_contexts_polls[males]"
-      span.help-block Numero dei maschi
+      label Maschi*
+      input.form-control type="number" name="activity[males]" value=params[:activity][:males]
+      span.help-block Numero dei partecipanti di genere maschile
     fieldset.col-xs-2
-      label Femmine
-      input.form-control type="number" name="coding_activity_contexts_polls[females]"
-      span.help-block Numero delle femmine
+      label Femmine*
+      input.form-control type="number" name="activity[females]" value=params[:activity][:females]
+      span.help-block Numero dei partecipanti di genere femminile
 
     fieldset.col-xs-3      
-        label Data inizio
+        label Data inizio*
         div.input-group.date.datetime-input
-          input.form-control type="datetime" name="coding_activity_contexts_polls[date_begin]"
+          input.form-control type="datetime" name="activity[date_begin]" value=params[:activity][:date_begin]
           span class="input-group-addon"
             span class="glyphicon glyphicon-calendar"
-        span.help-block Data di inizio del contesto.
+        span.help-block Data di inizio delle attività di coding (gg/mm/aaaa).
 
     fieldset.col-xs-3      
-        label Data termine
+        label Data termine*
         div.input-group.date.datetime-input
-          input.form-control type="datetime" name="coding_activity_contexts_polls[date_end]"
+          input.form-control type="datetime" name="activity[date_end]" value=params[:activity][:date_end]
           span class="input-group-addon"
             span class="glyphicon glyphicon-calendar"
-        span.help-block Data di termine del contesto.
+        span.help-block Data di termine delle attività di coding (gg/mm/aaaa).
 
   h2 Competenze del docente
 
   .form-group.row
     fieldset.col-xs-2
-      label Età
-      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][age]"
-      span.help-block Indicare l'età
+      label Età*
+      select.form-control type="text" name="teacher_skills[age]"
+        ruby:
+          options = [["0", "Non applicabile"],["3-6", "3-6"],["18-21", "18-21"],["21-25", "21-25"],
+            ["25-35", "25-35"],["35-45", "35-45"],["45-55", "45-55"],["55-100", "Oltre 55"]]
+        - options.each do |n|
+          - if params[:teacher_skills][:age].to_s == n[0]
+            option value="#{n[0]}" selected="1"
+              =n[1]
+          - else
+            option value="#{n[0]}"
+              =n[1] 
+      span.help-block Indicare l'età.
     fieldset.col-xs-2
       label Genere
-      select.form-control name="coding_activity_contexts_polls[teacher_skills][sex]"
-        option value="m" Maschile
-        option value="f" Femminile
-      span.help-block
+      select.form-control name="teacher_skills[sex]"
+        ruby:
+          options = [["0", "Non applicabile"],["m", "Maschile"],["f", "Femminile"]]
+        - options.each do |n|
+          - if params[:teacher_skills][:sex].to_s == n[0]
+            option value="#{n[0]}" selected="1"
+              =n[1]
+          - else
+            option value="#{n[0]}"
+              =n[1]  
+      span.help-block Indicare il genere dell'insegnante (facoltativo)
     fieldset.col-xs-4
-      label Ruolo o materia
-      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][role]"
-      span.help-block
+      label Ruolo o materia*
+      input.form-control type="text" name="teacher_skills[role]" value=params[:teacher_skills][:role]
+      span.help-block Indicare il ruolo svolto nella scuola (es.: Animatore Digitale) o la materia insegnata.
     fieldset.col-xs-4
-      label Gruppi
-      input.form-control type="text" name="coding_activity_contexts_polls[teacher_skills][groups]"
-      span.help-block
+      label Associazioni o Gruppi di appartenza.
+      input.form-control type="text" name="teacher_skills[groups]" value=params[:teacher_skills][:groups]
+      span.help-block Indicare possibilmente in campi separati da punto e virgola i gruppi di appartenenza.
 
   .form-group.row
     fieldset.col-xs-6
-      label Conoscenze
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[teacher_skills][knowledge]"
-      span.help-block
+      label Conoscenze*
+      textarea.form-control rows="4" name="teacher_skills[knowledge]"
+        ==params[:teacher_skills][:knowledge]
+      span.help-block Indicare possibilmente in campi separati da punti e virgola le conoscenze attinenti al contesto.
     fieldset.col-xs-6
-      label Formazione
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[teacher_skills][training]"
-      span.help-block
+      label Formazione*
+      textarea.form-control rows="4" name="teacher_skills[training]" 
+        ==params[:teacher_skills][:training]
+      span.help-block Indicare possibilmente in campi separati da punto e virgola gli ambiti di formazione attinenti e non attinenti al contesto.
 
   h2 Progetto
 
   .form-group.row
     fieldset.col-xs-4
-      label Tempo previsto
-      input.form-control type="text" name="coding_activity_contexts_polls[projects][estimated_time_in_days]"
-      span.help-block
+      label Tempo previsto*
+      input.form-control type="text" name="projects[estimated_time_in_days]" value=params[:projects][:estimated_time_in_days]
+      span.help-block Indicare in ore il tempo previsto per lo svolgimento della attività.
     fieldset.col-xs-3      
-        label Data inizio
+        label Data inizio*
         div.input-group.date.datetime-input
-          input.form-control type="datetime" name="coding_activity_contexts_polls[projects][date_begin]"
+          input.form-control type="datetime" name="projects[date_begin]" value=params[:projects][:date_begin]
           span class="input-group-addon"
             span class="glyphicon glyphicon-calendar"
-        span.help-block
+        span.help-block Indicare la data di inizio della attività (gg/mm/aaaa).
     fieldset.col-xs-3      
-        label Data fine
+        label Data fine*
         div.input-group.date.datetime-input
-          input.form-control type="datetime" name="coding_activity_contexts_polls[projects][date_end]"
+          input.form-control type="datetime" name="projects[date_end]" value=params[:projects][:date_end]
           span class="input-group-addon"
             span class="glyphicon glyphicon-calendar"
-        span.help-block
+        span.help-block Indicare la data di fine della attività (gg/mm/aaaa).
 
   .form-group.row
     fieldset.col-xs-4
-      label Obiettivo
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][goal]"
-      span.help-block
+      label Obiettivo*
+      textarea.form-control rows="4" name="projects[goals]" 
+        ==params[:projects][:goals]
+      span.help-block Indicare gli scopi raggiunti o previsti.
     fieldset.col-xs-4
-      label Attività proposte
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][activity]"
-      span.help-block
+      label Attività proposte*
+      textarea.form-control rows="4" name="projects[activity]" 
+        ==params[:projects][:activity]
+      span.help-block Indicare le attività proposte od eseguite.
     fieldset.col-xs-4
       label Buone pratiche
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][best_practices]"
-      span.help-block
+      textarea.form-control rows="4" name="projects[best_practices]" 
+        ==params[:projects][:best_practices]
+      span.help-block Indicare le <em>buone pratiche</em> utilizzate.
 
   .form-group.row
-    fieldset.col-xs-6
-      label Ambiente utilizzato
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][environments]"
-      span.help-block
-    fieldset.col-xs-6
+    fieldset.col-xs-12
+      label Ambienti utilizzati*
+      ruby:
+        ambients = [
+          ["Alice", "http://www.alice.org"],["Etoys","http://www.squeakland.org/"],["Kojo","http://www.kogics.net/sf:kojo"],
+          ["Snap!","https://snap.berkeley.edu/"],["BYOB","https://snap.berkeley.edu/"],["Catrobat","https://www.catrobat.org/"],["OpenRoberta","https://lab.open-roberta.org/"],
+          ["Minecraft","https://education.minecraft.net/"],["Apple Swift Playground","https://www.apple.com/swift/playgrounds/"],
+          ["ToonTalk","http://www.toontalk.com/"],["Linotte","http://langagelinotte.free.fr/wordpress/"],["Scratch","https://scratch.mit.edu/"],
+          ["Beebot","https://www.bee-bot.us/"],["CodyRoby","http://codeweek.it/codyroby/"],["CodeCombat","https://codecombat.com/"],
+          ["Blockly","https://developers.google.com/blockly/"],["KidsRuby","http://kidsruby.com/"],["DuckQuack","https://github.com/minimalprocedure/DuckQuack"],
+          ["Phratch","http://www.phratch.com/"],["Beetle Blocks","http://beetleblocks.com/"],["Touch Develop","https://www.touchdevelop.com/"],
+          ["Hackety Hack","http://hackety.com/"],["LibreLogo","http://librelogo.org"],["StarLogo","http://education.mit.edu/portfolio_page/starlogo-tng/"],
+          ["NetLogo","http://ccl.northwestern.edu/netlogo/"],["AgentSheets and AgentCubes","http://www.agentsheets.com/"],["Minetest","http://www.minetest.net/"]
+          ]
+          links = (ambients.reduce([]) {|acc, l| acc << %(<a href="#{l[1]}">#{l[0]}</a>)}).join(';')
+      textarea.form-control rows="4" name="projects[environments]" 
+        ==params[:projects][:environments]
+      span.help-block== %(Indicare possibilmente in campi separati da punto e virgola gli ambienti utilizzati. (es: #{links}))
+    fieldset.col-xs-12
       label Strumenti di monitoraggio
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[projects][monitorings]"
-      span.help-block
+      textarea.form-control rows="4" name="projects[monitorings]" 
+        ==params[:projects][:monitorings]
+      span.help-block Indicare se utilizzati eventuali ambienti di monitoraggio dei progressi.
 
   h2 Valutazione
 
   .form-group.row
     fieldset.col-xs-4
-      label Raggiungimento dell'obiettivo
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][goals]"
-      span.help-block
+      label Raggiungimento dell'obiettivo*
+      textarea.form-control rows="4" name="ratings[goals]" 
+        ==params[:ratings][:goals]
+      span.help-block Indicare se l'obiettivo è stato raggiunto ed in quale misura.
     fieldset.col-xs-4
       label Difficoltà principali incontrate
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][difficulties]"
-      span.help-block
+      textarea.form-control rows="4" name="ratings[difficulties]" 
+        ==params[:ratings][:difficulties]
+      span.help-block Indicare le eventuali difficoltà incontrate.
     fieldset.col-xs-4
       label Risultati non previsti
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][unexpected]"
-      span.help-block
+      textarea.form-control rows="4" name="ratings[unexpected]" 
+        ==params[:ratings][:unexpected]
+      span.help-block Indicare eventuali risultati non previsti.
 
   .form-group.row
     fieldset.col-xs-6
       label Commenti del docente
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][comments_teacher]"
-      span.help-block
+      textarea.form-control rows="4" name="ratings[comments_teacher]" 
+        ==params[:ratings][:comments_teacher]
+      span.help-block Eventuali commenti sulla attività svolta da parte del docente o suggerimenti per attività future.
     fieldset.col-xs-6
       label Commenti dei partecipanti
-      textarea.form-control rows="4" name="coding_activity_contexts_polls[ratings][comments]"
-      span.help-block
+      textarea.form-control rows="4" name="ratings[comments]" 
+        ==params[:ratings][:comments]
+      span.help-block Raccogliere dei commenti da parte dei partecipanti ed indicarli in forma anonima.
 
   h2 Sviluppi futuri
 
   .form-group.row
     fieldset.col-xs-4
       label Prosecuzione dell'attività
-      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][activities]"
-      span.help-block
+      - if params[:futures][:activities] && params[:futures][:activities] == "t"
+        input.form-control type="checkbox" name="futures[activities]" value="t" checked="1"
+      - else
+        input.form-control type="checkbox" name="futures[activities]" value="t" 
+      span.help-block Indicare se si intenderanno proseguire le attività o attività analoghe.
     fieldset.col-xs-4
       label Riuso dei prodotti
-      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][products_reuse]"
-      span.help-block
+      - if params[:futures][:products_reuse] && params[:futures][:products_reuse] == "t"
+        input.form-control type="checkbox" name="futures[products_reuse]" value="t" checked="1"
+      - else
+        input.form-control type="checkbox" name="futures[products_reuse]" value="t"
+      span.help-block Indicare se i prodotti software utilizzati saranno riutilizzati in caso di prosecuzione o nuove attività.
     fieldset.col-xs-4
-      label Condivisione
-      input.form-control type="checkbox" name="coding_activity_contexts_polls[futures][sharing]"
-      span.help-block
+      label Disponibilità alla condivisione
+      - if params[:futures][:sharing] && params[:futures][:sharing] == "t"
+        input.form-control type="checkbox" name="futures[sharing]" value="t" checked="1"
+      -else
+        input.form-control type="checkbox" name="futures[sharing]" value="t"
+      span.help-block Indicare se si è disponibili alla condivisione delle proprie attività con altri.
 
   .form-group.row
     fieldset.col-xs-3.col-md-offset-9
       input.form-control.btn.btn-default type="submit"
-

@@ -14,7 +14,7 @@ module CodingActivityPollSchema
       String   :province
       String   :city
       String   :school
-      String   :class
+      String   :classroom
       Float    :average_age
       Integer  :males
       Integer  :females
@@ -39,8 +39,8 @@ module CodingActivityPollSchema
 
     Sequel::Model.db_polls.create_table?(:coding_activity_projects_polls) {
       primary_key :id
-      foreign_key :context_id, :coding_activity_contexts_poll
-      Text     :goal
+      foreign_key :context_id, :coding_activity_contexts_polls
+      Text     :goals
       Integer  :estimated_time_in_days
       Datetime :date_begin
       Datetime :date_end
@@ -67,11 +67,11 @@ module CodingActivityPollSchema
     Sequel::Model.db_polls.create_table?(:coding_activity_futures_polls) {
       primary_key :id
       foreign_key :context_id, :coding_activity_contexts_polls
-      TrueClass   :activities
-      TrueClass   :products_reuse
-      TrueClass   :sharing
+      TrueClass   :activities, :default => false
+      TrueClass   :products_reuse, :default => false
+      TrueClass   :sharing, :default => false
       Datetime :created_on
       Datetime :updated_on
-    }  
+    }
 
 end

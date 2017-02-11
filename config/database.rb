@@ -12,18 +12,18 @@ module Database
   Sequel::Model.plugin(:boolean_readers)
   Sequel::Model.plugin(:validation_helpers)
   Sequel::Model.plugin(:timestamps, :update_on_create => true, :create => :created_on, :update => :updated_on)
-  Sequel::Model.raise_on_save_failure = false 
+  Sequel::Model.raise_on_save_failure = true
 
   class Sequel::Model
 
     def self.db_polls
       @db_polls
     end
-    
+
     def self.db_polls=(db)
       @db_polls = db
     end
-    
+
     def validate_date(date)
       unless values[date].blank?
         begin
@@ -33,14 +33,16 @@ module Database
         end
       end
     end
-    
+
   end
 
-  def self.connect_db_polls    
+  def self.connect_db_polls
     name = "codingmonamour.polls.db"
-    Sequel::Model.db_polls = Sequel.connect("sqlite://" + File.join(DB_FOLDER, name),  :loggers => [Logger.new(File.join(LOG_FOLDER, "#{name}.log"))]) unless Sequel::Model.db_polls
+    unless Sequel::Model.db_polls
+      Sequel::Model.db_polls = Sequel.connect("sqlite://" + File.join(DB_FOLDER, name),  :loggers => [Logger.new(File.join(LOG_FOLDER, "#{name}.log"))])
+    end
   end
-  connect_db_polls 
+  connect_db_polls
 
   def self.disconnect_db_polls
     Sequel::Model.db_polls.disconnect
@@ -54,6 +56,3 @@ module Database
   require 'models/coding_activity_poll'
 
 end
-
-
-

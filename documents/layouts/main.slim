@@ -50,22 +50,18 @@ html class="no-js" lang="#{m_string(:language, :sep => ',')}" dir="ltr"
           li ==< "<b>author: </b>#{m_string(:author, :scope => :document)}"
           li ==< "<b>editor: </b>#{m_string(:editor, :scope => :document)}"
           li ==< "<b>revision: </b>#{m_string(:revision, :scope => :document)}"
-          li ==< "<b>date: </b>#{m_date(:date, :scope => :document)}"
-
-    /.jumbotron.foot
-      
-
-
+          li ==< "<b>date: </b>#{m_date(:date, :scope => :document)}" 
 
     script src="/javascripts/jquery-3.1.1.min.js"
     script src="/javascripts/moment.js"
-    //script src="/javascripts/moment-with-locales.min.js"
+    script src="/javascripts/moment-with-locales.js"
     script src="/javascripts/highlight/highlight.pack.js"
     script src="/javascripts/bootstrap.js"
     script src="/javascripts/bootstrap-datetimepicker.min.js"
     script src="/javascripts/application.js"
     javascript:
       $(function() {
-        $('.datetime-input').datetimepicker();
+        $('.datetime-input').datetimepicker({
+          locale: 'it'
+        });
       });
-

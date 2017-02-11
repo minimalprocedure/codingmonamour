@@ -12,7 +12,7 @@
 }
 
 html {
-    
+
 }
 
 body {
@@ -104,8 +104,8 @@ nav.topbar {
 }
 
 .topbar li a:hover {
-    color: #ffffff; 
-    background-color: #FF89D4;    
+    color: #ffffff;
+    background-color: #FF89D4;
 }
 
 
@@ -140,6 +140,31 @@ p {
     font-size: 0.8em;
 }
 
+.help-block {
+  font-size: 0.8em;
+}
+
+.flash {
+  text-align: center;
+  padding: 1em;
+  border: 1px solid #cccccc;
+}
+
+.flash.success {
+  background-color: #52A7E2;
+}
+
+.flash.error {
+  background-color: #E25252;
+}
+
+input[type="number"] {
+  padding-right: 2px;
+}
+
+textarea.form-control {
+    height: 4em;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
 
@@ -195,7 +220,7 @@ p {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px){
-    
+
     .jumbotron.head h1 {
         margin: -2em 0em 0em 0em;
         color: #ffffff;
@@ -203,4 +228,3 @@ p {
         font-size: 2em;
     }
 }
-

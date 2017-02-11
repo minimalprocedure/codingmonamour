@@ -20,8 +20,8 @@ DB_SCHEMAS_FOLDER = File.join(CONFIG_FOLDER, 'schemas')
 DB_MODELS_FOLDER = File.join(CONFIG_FOLDER, 'models')
 LOG_FOLDER = File.join(ROOT_FOLDER, 'log')
 
-[  
-  LIB_FOLDER, 
+[
+  LIB_FOLDER,
   CONFIG_FOLDER,
   DB_SCHEMAS_FOLDER,
   DB_MODELS_FOLDER,
@@ -34,16 +34,19 @@ Dir[File.join(LIB_FOLDER, '*.rb')].each { |h| require(h) }
 require 'logger'
 require 'sinatra'
 require 'sinatra/base'
+require 'sinatra/flash'
 require 'slim'
 require 'yaml'
 require 'sequel'
 
 class MainApplication < Sinatra::Base
 
-  require 'database'
+  enable :sessions  
+  register Sinatra::Flash
 
+  require 'database'
   include Database
- 
+
   set :logging, true
   set :static, true
   set :root, ROOT_FOLDER
@@ -64,41 +67,35 @@ class MainApplication < Sinatra::Base
   #set :slim, :disable_escape => true
   #set :markdown, :layout_options => {:views => Proc.new { File.join(settings.views, "layouts") }}
   set :markdown, :layout_engine => :slim
-  set :markdown, :input => 'GFM' 
+  set :markdown, :input => 'GFM'
 
   require 'sass/plugin/rack'
   use Sass::Plugin::Rack
   Sass::Plugin.options[:syntax] = :scss
   Sass::Plugin.options[:style] =  :nested
   Sass::Plugin.options[:template_location] = File.join(DOC_FOLDER, 'stylesheets')
-  Sass::Plugin.options[:css_location] = File.join(PUB_FOLDER,'stylesheets')  
-  Sass::Plugin.options[:cache_location] = File.join(ROOT_FOLDER, 'temp', 'sass-cache')   
+  Sass::Plugin.options[:css_location] = File.join(PUB_FOLDER,'stylesheets')
+  Sass::Plugin.options[:cache_location] = File.join(ROOT_FOLDER, 'temp', 'sass-cache')
 
   helpers do
     include Rack::Utils
     alias_method :h, :escape_html
 
     Dir[File.join(HELPERS_FOLDER, '*.rb')].each { |h|
-      require h 
-      include eval(File.basename(h)[0..-4].capitalize) 
+      require h
+      include eval(File.basename(h)[0..-4].capitalize)
     }
   end
 
-  configure :development do    
+  configure :development do
     set :port, 3000
     set :slim, :pretty => false
     Sass::Plugin.options[:style] = :compressed
   end
 
   puts "Running in #{settings.environment}"
-  
+
   run! if app_file == $0
 end
 
 Dir[File.join(APP_FOLDER, '*.rb')].each { |h| require(h) }
-
-
-
-
-
-
