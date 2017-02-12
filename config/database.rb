@@ -56,3 +56,4 @@ module Database
   require 'models/coding_activity_poll'
 
 end
+Database.connect_db_polls

@@ -51,8 +51,8 @@ class MainApplication < Sinatra::Base
     scss(:'stylesheets/documents')
   end
 
-  post '/polls/coding' do    
-    Database.connect_db_polls
+  post '/polls/coding' do
+    #Database.connect_db_polls
     begin
       params[:futures] = {:activities=>"f", :products_reuse=>"f", :sharing=>"f"} unless params[:futures]
       @activity = CodingActivityContextsPoll.new(params[:activity])
@@ -67,7 +67,7 @@ class MainApplication < Sinatra::Base
         CodingActivityFuturesPoll.new(params[:futures]).save
         flash.now[:success] = "Informazioni inviate, grazie."
       end
-    rescue Sequel::ValidationFailed => e      
+    rescue Sequel::ValidationFailed => e
       @activity.teacher_skills.destroy if @activity.teacher_skills
       @activity.projects.destroy if @activity.projects
       @activity.ratings.destroy if @activity.ratings
@@ -78,7 +78,7 @@ class MainApplication < Sinatra::Base
     rescue Exception => e
       flash.now[:error] = "È occorso un problema nel salvataggio delle informazioni. Riprovate se possibile, grazie."
     end
-    Database.disconnect_db_polls
+    #Database.disconnect_db_polls
     #redirect '/polls/coding'
     layout = :'layouts/main'
     content = slim(:'views/polls/coding_activity')
@@ -87,7 +87,6 @@ class MainApplication < Sinatra::Base
 
   get '/polls/coding' do
     layout = :'layouts/main'
-    @activity = CodingActivityContextsPoll.new
     params[:activity] = {}
     params[:teacher_skills] = {}
     params[:projects] = {}
@@ -95,7 +94,7 @@ class MainApplication < Sinatra::Base
     params[:futures] = {}
     @request_meta = File.join(settings.views, "views", "polls", "coding_activity.yml")
     @metadatas = settings.metadatas.merge( File.exist?(@request_meta) ? YAML.load_file(@request_meta).to_h : {})
-    content = slim(:'views/polls/coding_activity')
+    content = slim(:'views/polls/coding_activity', :locals => {:polls => CodingActivityContextsPoll.all})
     slim(layout, :locals => { :content => content })
   end
 
