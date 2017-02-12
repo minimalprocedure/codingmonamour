@@ -29,7 +29,7 @@ module CodingActivityPollSchema
       foreign_key :context_id, :coding_activity_contexts_polls
       Integer  :age
       String   :sex, :fixed => true, :size => 1
-      String   :role
+      Text     :role
       Text     :knowledge
       Text     :training
       Text     :groups
