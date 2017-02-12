@@ -8,7 +8,7 @@ h1.heading-0 Censimento delle attività di coding
 form action="/polls/coding" method="POST"
   h2 Contesto
   .form-group.row
-    fieldset.col-xs-2
+    fieldset.col-md-2
       label Classe*
       select.form-control type="text" name="activity[classroom]"
         ruby:
@@ -22,7 +22,7 @@ form action="/polls/coding" method="POST"
             option value="#{n[0]}"
               =n[1]  
       span.help-block Scegliere la classe.
-    fieldset.col-xs-5
+    fieldset.col-md-5
       label Scuola*      
       select.form-control type="text" name="activity[school]"
         ruby:
@@ -37,12 +37,12 @@ form action="/polls/coding" method="POST"
           - else
             option value="#{n}"
               =n  
-      span.help-block Nome della scuola.
-    fieldset.col-xs-3
+      span.help-block Scegliere il tipo di scuola.
+    fieldset.col-md-3
       label Città
       input.form-control type="text" name="activity[city]" value=params[:activity][:city]
       span.help-block Nome della città in cui risiede la scuola.
-    fieldset.col-xs-2
+    fieldset.col-md-2
       label Provincia*
       select.form-control type="number" name="activity[province]"
         ruby:
@@ -70,7 +70,7 @@ form action="/polls/coding" method="POST"
       span.help-block Indicare la provincia dove risiede la scuola.
 
   .form-group.row
-    fieldset.col-xs-2
+    fieldset.col-md-2
       label Età media*
       select.form-control type="number" name="activity[average_age]"
         ruby:
@@ -84,17 +84,17 @@ form action="/polls/coding" method="POST"
           - else
             option value="#{n[0]}"
               =n[1] 
-      span.help-block Età media dei partecipanti arrotondata all'intero.
-    fieldset.col-xs-2
+      span.help-block Età media dei partecipanti per fasce.
+    fieldset.col-md-2
       label Maschi*
       input.form-control type="number" name="activity[males]" value=params[:activity][:males]
       span.help-block Numero dei partecipanti di genere maschile
-    fieldset.col-xs-2
+    fieldset.col-md-2
       label Femmine*
       input.form-control type="number" name="activity[females]" value=params[:activity][:females]
       span.help-block Numero dei partecipanti di genere femminile
 
-    fieldset.col-xs-3      
+    fieldset.col-md-3      
         label Data inizio*
         div.input-group.date.datetime-input
           input.form-control type="datetime" name="activity[date_begin]" value=params[:activity][:date_begin]
@@ -102,7 +102,7 @@ form action="/polls/coding" method="POST"
             span class="glyphicon glyphicon-calendar"
         span.help-block Data di inizio delle attività di coding (gg/mm/aaaa).
 
-    fieldset.col-xs-3      
+    fieldset.col-md-3      
         label Data termine*
         div.input-group.date.datetime-input
           input.form-control type="datetime" name="activity[date_end]" value=params[:activity][:date_end]
@@ -113,7 +113,7 @@ form action="/polls/coding" method="POST"
   h2 Competenze del docente
 
   .form-group.row
-    fieldset.col-xs-2
+    fieldset.col-md-2
       label Età*
       select.form-control type="text" name="teacher_skills[age]"
         ruby:
@@ -126,8 +126,8 @@ form action="/polls/coding" method="POST"
           - else
             option value="#{n[0]}"
               =n[1] 
-      span.help-block Indicare l'età.
-    fieldset.col-xs-2
+      span.help-block Indicare la fascia d'età.
+    fieldset.col-md-2
       label Genere
       select.form-control name="teacher_skills[sex]"
         ruby:
@@ -140,42 +140,42 @@ form action="/polls/coding" method="POST"
             option value="#{n[0]}"
               =n[1]  
       span.help-block Indicare il genere dell'insegnante (facoltativo)
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Ruolo o materia*
       input.form-control type="text" name="teacher_skills[role]" value=params[:teacher_skills][:role]
       span.help-block Indicare il ruolo svolto nella scuola (es.: Animatore Digitale) o la materia insegnata.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Associazioni o Gruppi di appartenza.
       input.form-control type="text" name="teacher_skills[groups]" value=params[:teacher_skills][:groups]
-      span.help-block Indicare possibilmente in campi separati da punto e virgola i gruppi di appartenenza.
+      span.help-block Indicare possibilmente in campi separati da punto e virgola i gruppi o le associazioni di appartenenza.
 
   .form-group.row
-    fieldset.col-xs-6
+    fieldset.col-md-6
       label Conoscenze*
       textarea.form-control rows="4" name="teacher_skills[knowledge]"
         ==params[:teacher_skills][:knowledge]
       span.help-block Indicare possibilmente in campi separati da punti e virgola le conoscenze attinenti al contesto.
-    fieldset.col-xs-6
+    fieldset.col-md-6
       label Formazione*
       textarea.form-control rows="4" name="teacher_skills[training]" 
         ==params[:teacher_skills][:training]
-      span.help-block Indicare possibilmente in campi separati da punto e virgola gli ambiti di formazione attinenti e non attinenti al contesto.
+      span.help-block Indicare possibilmente in campi separati da punto e virgola gli ambiti di formazione attinenti al contesto.
 
   h2 Progetto
 
   .form-group.row
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Tempo previsto*
       input.form-control type="text" name="projects[estimated_time_in_days]" value=params[:projects][:estimated_time_in_days]
       span.help-block Indicare in ore il tempo previsto per lo svolgimento della attività.
-    fieldset.col-xs-3      
+    fieldset.col-md-3      
         label Data inizio*
         div.input-group.date.datetime-input
           input.form-control type="datetime" name="projects[date_begin]" value=params[:projects][:date_begin]
           span class="input-group-addon"
             span class="glyphicon glyphicon-calendar"
         span.help-block Indicare la data di inizio della attività (gg/mm/aaaa).
-    fieldset.col-xs-3      
+    fieldset.col-md-3      
         label Data fine*
         div.input-group.date.datetime-input
           input.form-control type="datetime" name="projects[date_end]" value=params[:projects][:date_end]
@@ -184,24 +184,24 @@ form action="/polls/coding" method="POST"
         span.help-block Indicare la data di fine della attività (gg/mm/aaaa).
 
   .form-group.row
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Obiettivo*
       textarea.form-control rows="4" name="projects[goals]" 
         ==params[:projects][:goals]
       span.help-block Indicare gli scopi raggiunti o previsti.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Attività proposte*
       textarea.form-control rows="4" name="projects[activity]" 
         ==params[:projects][:activity]
       span.help-block Indicare le attività proposte od eseguite.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Buone pratiche
       textarea.form-control rows="4" name="projects[best_practices]" 
         ==params[:projects][:best_practices]
       span.help-block Indicare le <em>buone pratiche</em> utilizzate.
 
   .form-group.row
-    fieldset.col-xs-12
+    fieldset.col-md-12
       label Ambienti utilizzati*
       ruby:
         ambients = [
@@ -215,11 +215,11 @@ form action="/polls/coding" method="POST"
           ["Hackety Hack","http://hackety.com/"],["LibreLogo","http://librelogo.org"],["StarLogo","http://education.mit.edu/portfolio_page/starlogo-tng/"],
           ["NetLogo","http://ccl.northwestern.edu/netlogo/"],["AgentSheets and AgentCubes","http://www.agentsheets.com/"],["Minetest","http://www.minetest.net/"]
           ]
-          links = (ambients.reduce([]) {|acc, l| acc << %(<a href="#{l[1]}">#{l[0]}</a>)}).join(';')
+          links = (ambients.reduce([]) {|acc, l| acc << %(<a href="#{l[1]}">#{l[0]}</a>)}).join('; ')
       textarea.form-control rows="4" name="projects[environments]" 
         ==params[:projects][:environments]
-      span.help-block== %(Indicare possibilmente in campi separati da punto e virgola gli ambienti utilizzati. (es: #{links}))
-    fieldset.col-xs-12
+      span.help-block== %(Indicare possibilmente, se più di uno, in campi separati da punto e virgola gli ambienti utilizzati. (lista non completa: #{links}))
+    fieldset.col-md-12
       label Strumenti di monitoraggio
       textarea.form-control rows="4" name="projects[monitorings]" 
         ==params[:projects][:monitorings]
@@ -228,29 +228,29 @@ form action="/polls/coding" method="POST"
   h2 Valutazione
 
   .form-group.row
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Raggiungimento dell'obiettivo*
       textarea.form-control rows="4" name="ratings[goals]" 
         ==params[:ratings][:goals]
       span.help-block Indicare se l'obiettivo è stato raggiunto ed in quale misura.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Difficoltà principali incontrate
       textarea.form-control rows="4" name="ratings[difficulties]" 
         ==params[:ratings][:difficulties]
       span.help-block Indicare le eventuali difficoltà incontrate.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Risultati non previsti
       textarea.form-control rows="4" name="ratings[unexpected]" 
         ==params[:ratings][:unexpected]
       span.help-block Indicare eventuali risultati non previsti.
 
   .form-group.row
-    fieldset.col-xs-6
+    fieldset.col-md-6
       label Commenti del docente
       textarea.form-control rows="4" name="ratings[comments_teacher]" 
         ==params[:ratings][:comments_teacher]
       span.help-block Eventuali commenti sulla attività svolta da parte del docente o suggerimenti per attività future.
-    fieldset.col-xs-6
+    fieldset.col-md-6
       label Commenti dei partecipanti
       textarea.form-control rows="4" name="ratings[comments]" 
         ==params[:ratings][:comments]
@@ -259,21 +259,21 @@ form action="/polls/coding" method="POST"
   h2 Sviluppi futuri
 
   .form-group.row
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Prosecuzione dell'attività
       - if params[:futures][:activities] && params[:futures][:activities] == "t"
         input.form-control type="checkbox" name="futures[activities]" value="t" checked="1"
       - else
         input.form-control type="checkbox" name="futures[activities]" value="t" 
       span.help-block Indicare se si intenderanno proseguire le attività o attività analoghe.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Riuso dei prodotti
       - if params[:futures][:products_reuse] && params[:futures][:products_reuse] == "t"
         input.form-control type="checkbox" name="futures[products_reuse]" value="t" checked="1"
       - else
         input.form-control type="checkbox" name="futures[products_reuse]" value="t"
       span.help-block Indicare se i prodotti software utilizzati saranno riutilizzati in caso di prosecuzione o nuove attività.
-    fieldset.col-xs-4
+    fieldset.col-md-4
       label Disponibilità alla condivisione
       - if params[:futures][:sharing] && params[:futures][:sharing] == "t"
         input.form-control type="checkbox" name="futures[sharing]" value="t" checked="1"
@@ -282,5 +282,5 @@ form action="/polls/coding" method="POST"
       span.help-block Indicare se si è disponibili alla condivisione delle proprie attività con altri.
 
   .form-group.row
-    fieldset.col-xs-3.col-md-offset-9
+    fieldset.col-md-3.col-md-offset-9
       input.form-control.btn.btn-default type="submit"
