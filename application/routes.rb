@@ -81,7 +81,7 @@ class MainApplication < Sinatra::Base
     #Database.disconnect_db_polls
     #redirect '/polls/coding'
     layout = :'layouts/main'
-    content = slim(:'views/polls/coding_activity')
+    content = slim(:'views/polls/coding_activity', :locals => {:polls => CodingActivityContextsPoll.all})
     slim(layout, :locals => { :content => content })
   end
 
