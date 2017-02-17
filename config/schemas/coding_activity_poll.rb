@@ -46,6 +46,10 @@ module CodingActivityPollSchema
       Datetime :date_end
       Text     :activity
       Text     :environments
+      Text     :environment1
+      Text     :environment2
+      Text     :environment3
+      Text     :environment4
       Text     :monitorings
       Text     :best_practices
       Datetime :created_on

@@ -50,7 +50,7 @@ class CodingActivityProjectsPoll < Sequel::Model(Sequel::Model.db_polls)
     validates_presence :date_begin, :message => "Data di inizio mancante."
     validates_presence :date_end, :message => "Data di termine mancante."
     validates_presence :activity, :message => "Attività proposte mancanti."
-    validates_presence :environments, :message => "Ambienti utilizzati mancanti."
+    validates_presence :environment1, :message => "Ambiente principale utilizzato mancante."
   end
 end
 

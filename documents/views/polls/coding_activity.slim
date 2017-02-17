@@ -12,7 +12,7 @@ form action="/polls/coding" method="POST"
       label Classe*
       select.form-control type="text" name="activity[classroom]"
         ruby:
-          options = [["0", "Non applicabile"],["1", "Prima"],["2", "Seconda"],
+          options = [["0", "Non indicata"],["1", "Prima"],["2", "Seconda"],
             ["3", "Terza"],["4", "Quarta"],["5", "Quinta"]]
         - options.each do |n|
           - if params[:activity][:classroom].to_s == n[0]
@@ -26,7 +26,7 @@ form action="/polls/coding" method="POST"
       label Scuola*      
       select.form-control type="text" name="activity[school]"
         ruby:
-          options = ["Non applicabile", "Scuola dell'Infanzia","Scuola primaria","Scuola secondaria di primo grado",
+          options = ["Nessuna", "Scuola dell'Infanzia","Scuola primaria","Scuola secondaria di primo grado",
             "Scuola secondaria di secondo grado","Liceo artistico","Liceo classico","Liceo linguistico",
             "Liceo musicale e coreutico","Liceo scientifico","Liceo scienze umane","Istituto tecnico","Istituto professionale",
             "Scuole con indirizzo informatico"]
@@ -46,7 +46,7 @@ form action="/polls/coding" method="POST"
       label Provincia*
       select.form-control type="number" name="activity[province]"
         ruby:
-          options = [["Non applicabile","0"],["Agrigento","AG"],["Alessandria","AL"],["Ancona","AN"],["Aosta","AO"],["Arezzo","AR"],["Ascoli Piceno","AP"],
+          options = [["Non indicata","0"],["Agrigento","AG"],["Alessandria","AL"],["Ancona","AN"],["Aosta","AO"],["Arezzo","AR"],["Ascoli Piceno","AP"],
             ["Asti","AT"],["Avellino","AV"],["Barletta-Andria-Trani","BT"],["Belluno","BL"],["Benevento","BN"],["Bergamo","BG"],
             ["Biella","BI"],["Bolzano","BZ"],["Brescia","BS"],["Brindisi","BR"],["Caltanissetta","CL"],["Campobasso","CB"],["Caserta","CE"],
             ["Catanzaro","CZ"],["Chieti","CH"],["Como","CO"],["Cosenza","CS"],["Cremona","CR"],["Crotone","KR"],["Cuneo","CN"],
@@ -74,7 +74,7 @@ form action="/polls/coding" method="POST"
       label Età media*
       select.form-control type="number" name="activity[average_age]"
         ruby:
-          options = [["0", "Non applicabile"],["3-6", "3-6"],["6-9", "6-9"],["9-12", "9-12"],["12-15", "12-15"],
+          options = [["0", "Non indicata"],["3-6", "3-6"],["6-9", "6-9"],["9-12", "9-12"],["12-15", "12-15"],
             ["15-18", "15-18"],["18-21", "18-21"],["21-25", "21-25"],["25-35", "25-35"],
             ["35-45", "35-45"],["45-55", "45-55"],["55-100", "Oltre 55"]]
         - options.each do |n|
@@ -117,7 +117,7 @@ form action="/polls/coding" method="POST"
       label Età*
       select.form-control type="text" name="teacher_skills[age]"
         ruby:
-          options = [["0", "Non applicabile"],["3-6", "3-6"],["18-21", "18-21"],["21-25", "21-25"],
+          options = [["0", "Non indicata"],["18-21", "18-21"],["21-25", "21-25"],
             ["25-35", "25-35"],["35-45", "35-45"],["45-55", "45-55"],["55-100", "Oltre 55"]]
         - options.each do |n|
           - if params[:teacher_skills][:age].to_s == n[0]
@@ -131,7 +131,7 @@ form action="/polls/coding" method="POST"
       label Genere
       select.form-control name="teacher_skills[sex]"
         ruby:
-          options = [["0", "Non applicabile"],["m", "Maschile"],["f", "Femminile"]]
+          options = [["0", "Non indicata"],["m", "Maschile"],["f", "Femminile"]]
         - options.each do |n|
           - if params[:teacher_skills][:sex].to_s == n[0]
             option value="#{n[0]}" selected="1"
@@ -141,9 +141,9 @@ form action="/polls/coding" method="POST"
               =n[1]  
       span.help-block Indicare il genere dell'insegnante (facoltativo)
     fieldset.col-md-4
-      label Ruolo o materia*
+      label Ruolo e/o materia*
       input.form-control type="text" name="teacher_skills[role]" value=params[:teacher_skills][:role]
-      span.help-block Indicare il ruolo svolto nella scuola (es.: Animatore Digitale) o la materia insegnata.
+      span.help-block Indicare il ruolo svolto nella scuola (es.: Animatore Digitale) e/o la materia insegnata.
     fieldset.col-md-4
       label Associazioni o Gruppi di appartenza.
       input.form-control type="text" name="teacher_skills[groups]" value=params[:teacher_skills][:groups]
@@ -200,25 +200,83 @@ form action="/polls/coding" method="POST"
         ==params[:projects][:best_practices]
       span.help-block Indicare le <em>buone pratiche</em> utilizzate.
 
+
+
   .form-group.row
-    fieldset.col-md-12
-      label Ambienti utilizzati*
+    fieldset.col-md-12.row      
       ruby:
         ambients = [
-          ["Alice", "http://www.alice.org"],["Etoys","http://www.squeakland.org/"],["Kojo","http://www.kogics.net/sf:kojo"],
-          ["Snap!","https://snap.berkeley.edu/"],["BYOB","https://snap.berkeley.edu/"],["Catrobat","https://www.catrobat.org/"],["OpenRoberta","https://lab.open-roberta.org/"],
-          ["Minecraft","https://education.minecraft.net/"],["Apple Swift Playground","https://www.apple.com/swift/playgrounds/"],
-          ["ToonTalk","http://www.toontalk.com/"],["Linotte","http://langagelinotte.free.fr/wordpress/"],["Scratch","https://scratch.mit.edu/"],
-          ["Beebot","https://www.bee-bot.us/"],["CodyRoby","http://codeweek.it/codyroby/"],["CodeCombat","https://codecombat.com/"],
-          ["Blockly","https://developers.google.com/blockly/"],["KidsRuby","http://kidsruby.com/"],["DuckQuack","https://github.com/minimalprocedure/DuckQuack"],
-          ["Phratch","http://www.phratch.com/"],["Beetle Blocks","http://beetleblocks.com/"],["Touch Develop","https://www.touchdevelop.com/"],
-          ["Hackety Hack","http://hackety.com/"],["LibreLogo","http://librelogo.org"],["StarLogo","http://education.mit.edu/portfolio_page/starlogo-tng/"],
-          ["NetLogo","http://ccl.northwestern.edu/netlogo/"],["AgentSheets and AgentCubes","http://www.agentsheets.com/"],["Minetest","http://www.minetest.net/"]
+          ["Scratch 2.x", "Scratch2","https://scratch.mit.edu/"],
+          ["AgentSheets and AgentCubes", "AgentSheets and AgentCubes","http://www.agentsheets.com/"],
+          ["Alice", "Alice", "http://www.alice.org"],
+          ["Apple Swift Playground", "Apple Swift Playground","https://www.apple.com/swift/playgrounds/"],
+          ["Beebot", "Beebot","https://www.bee-bot.us/"],
+          ["Beetle Blocks", "Beetle Blocks","http://beetleblocks.com/"],
+          ["Blockly", "Blockly","https://developers.google.com/blockly/"],
+          ["BYOB","BYOB","https://snap.berkeley.edu/"],
+          ["Catrobat", "Catrobat","https://www.catrobat.org/"],
+          ["CodeCombat", "CodeCombat","https://codecombat.com/"],
+          ["CodyRoby", "CodyRoby","http://codeweek.it/codyroby/"],
+          ["DuckQuack", "DuckQuack","https://github.com/minimalprocedure/DuckQuack"],
+          ["Etoys", "Etoys","http://www.squeakland.org/"],
+          ["Hackety Hack", "Hackety Hack","http://hackety.com/"],
+          ["KidsRuby", "KidsRuby","http://kidsruby.com/"],
+          ["Kojo", "Kojo","http://www.kogics.net/sf:kojo"],
+          ["LibreLogo", "LibreLogo","http://librelogo.org"],
+          ["Linotte", "Linotte","http://langagelinotte.free.fr/wordpress/"],          
+          ["Minecraft", "Minecraft","https://education.minecraft.net/"],
+          ["Minetest", "Minetest","http://www.minetest.net/"],
+          ["NetLogo", "NetLogo","http://ccl.northwestern.edu/netlogo/"],
+          ["OpenRoberta", "OpenRoberta","https://lab.open-roberta.org/"],
+          ["Phratch", "Phratch","http://www.phratch.com/"],
+          ["Scratch 1.4", "Scratch1","https://scratch.mit.edu/"],          
+          ["Snap!", "Snap!","https://snap.berkeley.edu/"],
+          ["StarLogo", "StarLogo","http://education.mit.edu/portfolio_page/starlogo-tng/"],
+          ["ToonTalk", "ToonTalk","http://www.toontalk.com/"],
+          ["Touch Develop", "Touch Develop","https://www.touchdevelop.com/"]
           ]
-          links = (ambients.reduce([]) {|acc, l| acc << %(<a href="#{l[1]}">#{l[0]}</a>)}).join('; ')
-      textarea.form-control rows="4" name="projects[environments]" 
+          links = (ambients.reduce([]) {|acc, l| acc << %(<a href="#{l[2]}">#{l[0]}</a>)}).join('; ')
+
+          def build_options(ambients, num)
+            (ambients.reduce([]) {|acc, l| 
+              selected = params[:projects]["environment#{num}".to_sym].to_s == l[1] ? 'selected' : ''
+                p params[:projects]["environment#{num}".to_sym].to_s
+                p l[0]
+              acc << %(<option #{selected} value="#{l[1]}">#{l[0]}</option>)
+            }).join
+          end
+
+    fieldset.col-md-3  
+      label Ambiente utilizzato*
+      select.form-control type="text" name="projects[environment1]"
+        option value="0" = "Non indicato"
+        ==build_options(ambients, 1)
+
+    fieldset.col-md-3  
+      label Ambiente utilizzato
+      select.form-control type="text" name="projects[environment2]" 
+        option value="0" = "Non indicato"
+        ==build_options(ambients, 2)
+
+    fieldset.col-md-3 
+      label Ambiente utilizzato
+      select.form-control type="text" name="projects[environment3]" 
+        option value="0" = "Non indicato"
+        ==build_options(ambients, 3)
+
+    fieldset.col-md-3  
+      label Ambiente utilizzato
+      select.form-control type="text" name="projects[environment4]" 
+        option value="0" = "Non indicato"
+        ==build_options(ambients, 4)
+
+    fieldset.col-md-12 
+      label Ambiente aggiuntivi non compresi.
+      textarea.form-control.col-md-4 rows="4" name="projects[environments]" 
         ==params[:projects][:environments]
       span.help-block== %(Indicare possibilmente, se più di uno, in campi separati da punto e virgola gli ambienti utilizzati. (lista non completa: #{links}))
+
+
     fieldset.col-md-12
       label Strumenti di monitoraggio
       textarea.form-control rows="4" name="projects[monitorings]" 
