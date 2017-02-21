@@ -271,7 +271,7 @@ form action="/polls/coding" method="POST"
         ==build_options(ambients, 4)
 
     fieldset.col-md-12 
-      label Ambienti aggiuntivi non compresi nella liste precedenti.
+      label Ambienti aggiuntivi non compresi nelle liste precedenti.
       textarea.form-control.col-md-4 rows="4" name="projects[environments]" 
         ==params[:projects][:environments]
       span.help-block== %(Indicare possibilmente, se più di uno, in campi separati da punto e virgola gli ambienti utilizzati. (lista non completa: #{links}))
@@ -340,5 +340,30 @@ form action="/polls/coding" method="POST"
       span.help-block Indicare se si è disponibili alla condivisione delle proprie attività con altri.
 
   .form-group.row
-    fieldset.col-md-3.col-md-offset-9
+    fieldset.col-md-9
+      .email
+        =="Nel caso si incontrassero problemi nella compilazione: "      
+        a href="mailto:info@codingmonamour.org?subject=[#codingmonamour:polls:coding]"
+          =="info@codingmonamour.org"
+    fieldset.col-md-3
       input.form-control.btn.btn-default type="submit" value="Invia"
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
