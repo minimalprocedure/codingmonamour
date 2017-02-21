@@ -3,7 +3,7 @@ h1.heading-0 Censimento delle attività di coding
 ==styled_flash
 
 .polls-info
-  h4 Sono state censite #{polls.size} attività all #{Time.now.strftime("%d/%m/%Y")}.
+  h4 Sono state censite #{polls.size} attività al #{Time.now.strftime("%d/%m/%Y")}.
 
 form action="/polls/coding" method="POST"
   h2 Contesto
@@ -84,7 +84,7 @@ form action="/polls/coding" method="POST"
           - else
             option value="#{n[0]}"
               =n[1] 
-      span.help-block Età media dei partecipanti per fasce.
+      span.help-block Età media dei partecipanti.
     fieldset.col-md-2
       label Maschi*
       input.form-control type="number" name="activity[males]" value=params[:activity][:males]
@@ -247,31 +247,31 @@ form action="/polls/coding" method="POST"
           end
 
     fieldset.col-md-3  
-      label Ambiente utilizzato*
+      label Ambiente primario*
       select.form-control type="text" name="projects[environment1]"
         option value="0" = "Non indicato"
         ==build_options(ambients, 1)
 
     fieldset.col-md-3  
-      label Ambiente utilizzato
+      label Ambiente secondario
       select.form-control type="text" name="projects[environment2]" 
         option value="0" = "Non indicato"
         ==build_options(ambients, 2)
 
     fieldset.col-md-3 
-      label Ambiente utilizzato
+      label Ambiente aggiuntivo
       select.form-control type="text" name="projects[environment3]" 
         option value="0" = "Non indicato"
         ==build_options(ambients, 3)
 
     fieldset.col-md-3  
-      label Ambiente utilizzato
+      label Ambiente aggiuntivo
       select.form-control type="text" name="projects[environment4]" 
         option value="0" = "Non indicato"
         ==build_options(ambients, 4)
 
     fieldset.col-md-12 
-      label Ambienti aggiuntivi non compresi nella lista.
+      label Ambienti aggiuntivi non compresi nella liste precedenti.
       textarea.form-control.col-md-4 rows="4" name="projects[environments]" 
         ==params[:projects][:environments]
       span.help-block== %(Indicare possibilmente, se più di uno, in campi separati da punto e virgola gli ambienti utilizzati. (lista non completa: #{links}))
@@ -304,12 +304,12 @@ form action="/polls/coding" method="POST"
 
   .form-group.row
     fieldset.col-md-6
-      label Commenti del docente
+      label Osservazioni del docente
       textarea.form-control rows="4" name="ratings[comments_teacher]" 
         ==params[:ratings][:comments_teacher]
       span.help-block Eventuali commenti sulla attività svolta da parte del docente o suggerimenti per attività future.
     fieldset.col-md-6
-      label Commenti dei partecipanti
+      label Osservazioni dei partecipanti
       textarea.form-control rows="4" name="ratings[comments]" 
         ==params[:ratings][:comments]
       span.help-block Raccogliere dei commenti da parte dei partecipanti ed indicarli in forma anonima.
@@ -341,4 +341,4 @@ form action="/polls/coding" method="POST"
 
   .form-group.row
     fieldset.col-md-3.col-md-offset-9
-      input.form-control.btn.btn-default type="submit"
+      input.form-control.btn.btn-default type="submit" value="Invia"
