@@ -1,9 +1,17 @@
 h1.heading-0 Censimento delle attività di coding
 
-==styled_flash
+.poll-info Il censimento è condotto in forma <strong>anonima</strong> e non contiene tracciatori di nessun genere. Si è scelto di non inserire un
+  <em><a href="https://it.wikipedia.org/wiki/CAPTCHA">CAPTCHA</a></em> a protezione della scansione automatica del modulo per rendere la compilazione meno tediosa. 
+  Per quanto possibile sono state inserite caselle a discesa ma in alcuni casi i campi liberi sono stati l'unica alternativa visto la moltitudine di possibilità.
+  Confidiamo nella vostra serietà e scrupolo per riuscire a creare una visione sufficientemente reale delle attività di coding svolte in Italia. 
+
+.polls-info Grazie
 
 .polls-info
   h4 Sono state censite #{polls.size} attività al #{Time.now.strftime("%d/%m/%Y")}.
+
+.polls-info
+  ==styled_flash
 
 form action="/polls/coding" method="POST"
   h2 Contesto
@@ -240,8 +248,6 @@ form action="/polls/coding" method="POST"
           def build_options(ambients, num)
             (ambients.reduce([]) {|acc, l| 
               selected = params[:projects]["environment#{num}".to_sym].to_s == l[1] ? 'selected' : ''
-                p params[:projects]["environment#{num}".to_sym].to_s
-                p l[0]
               acc << %(<option #{selected} value="#{l[1]}">#{l[0]}</option>)
             }).join
           end
