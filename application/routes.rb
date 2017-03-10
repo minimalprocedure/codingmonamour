@@ -97,6 +97,16 @@ class MainApplication < Sinatra::Base
     content = slim(:'views/polls/coding_activity', :locals => {:polls => CodingActivityContextsPoll.all})
     slim(layout, :locals => { :content => content })
   end
+  
+  get '/polls/get/db' do
+    send_file(File.join(DB_FOLDER, "codingmonamour.polls.db"),
+      :filename => "codingmonamour.polls.db", :type => "application/octet-stream")
+  end
+  
+  get '/polls/get/db/schema_image' do
+    send_file(File.join(DB_FOLDER, "codingmonamour.polls.db.jpeg"),
+      :filename => "codingmonamour.polls.db.jpeg", :type => "image/jpeg")
+  end
 
   get '*' do
     layout = :'layouts/main'
