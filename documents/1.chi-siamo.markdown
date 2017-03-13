@@ -30,6 +30,7 @@ Vorremmo che la nostra azione fosse **culturale** in prima istanza, ma anche **t
 + [Massimo Ghisalberti](http://minimalprocedure.pragmas.org/) (*Analista programmatore, consulente su architetture software, linguaggi e paradigmi di programmazione*)
 + [Nicolò Porta]() (*Insegnante*)
 + [Rodolfo Marchisio]() (*Ex insegnante secondaria, formatore*)
++ [Rossella Latempa]() (*Insegnante Secondaria di secondo grado*)
 + [Sabina Tartaglia]() (*Insegnante*)
 + [Saverio Faniglulio]() (*Insegnante Secondaria di primo grado*
 + [Stefano Penge](http://steve.lynxlab.com/) (*Architetto software, insegnante e ricercatore con esperienza in sistemi di e-learning open-source*)
